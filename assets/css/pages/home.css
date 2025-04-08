@@ -24,7 +24,7 @@ body {
   visibility: visible;
   overflow-x: hidden;
   color: #696969;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 h1,
@@ -83,11 +83,11 @@ a:focus {
 
 a:hover {
   text-decoration: none;
-  color: #FFB646;
+  color: #ffb646;
 }
 
 button,
-input[type=submit] {
+input[type="submit"] {
   cursor: pointer;
 }
 
@@ -120,32 +120,39 @@ hr {
   border-top-width: 2px;
 }
 
-.btn-primary, .btn-primary-outline {
+.btn-primary,
+.btn-primary-outline {
   margin-right: 8px;
   padding: 12px 24px;
   border: 1px solid rgba(8, 8, 8, 0.4);
   font-weight: 700;
   font-size: 15px;
   background-color: #080808;
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: capitalize;
   line-height: 1;
   border-radius: 8px;
   transition: all 0.5s;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
-  .btn-primary, .btn-primary-outline {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
+  .btn-primary,
+  .btn-primary-outline {
     padding: 16px 28px;
   }
 }
-.btn-primary:hover, .btn-primary-outline:hover {
+.btn-primary:hover,
+.btn-primary-outline:hover {
   background-color: transparent;
   border-color: rgba(8, 8, 8, 0.4);
   color: rgba(8, 8, 8, 0.95);
 }
-.btn-primary:hover .animate-arrow-up, .btn-primary-outline:hover .animate-arrow-up {
+.btn-primary:hover .animate-arrow-up,
+.btn-primary-outline:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 
 .btn-primary-outline {
@@ -156,7 +163,7 @@ hr {
 .btn-primary-outline:hover {
   background-color: #080808;
   border-color: #080808;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .tab-btn {
@@ -165,28 +172,30 @@ hr {
   font-size: 15px;
   font-weight: 700;
   text-transform: capitalize;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #080808;
   line-height: 1;
   border-radius: 8px;
   transition: all 0.3s;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .tab-btn {
     padding: 16px 28px;
   }
 }
 .tab-btn:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #080808;
 }
 .tab-btn:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 
 .tab-btn.active {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #080808;
 }
 
@@ -313,36 +322,41 @@ hr {
   font-size: 32px;
 }
 
-.circle-shape, .section-title.circle-shape {
+.circle-shape,
+.section-title.circle-shape {
   z-index: 1;
 }
 
-.circle-shape::before, .section-title.circle-shape::before {
+.circle-shape::before,
+.section-title.circle-shape::before {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   content: "";
   display: block;
-  background-color: #FFB646;
+  background-color: #ffb646;
   border-radius: 100%;
   width: 70px;
   height: 70px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .circle-shape::before, .section-title.circle-shape::before {
+  .circle-shape::before,
+  .section-title.circle-shape::before {
     width: 85px;
     height: 85px;
   }
 }
 @media only screen and (min-width: 1280px) and (max-width: 1440px) {
-  .circle-shape::before, .section-title.circle-shape::before {
+  .circle-shape::before,
+  .section-title.circle-shape::before {
     width: 100px;
     height: 100px;
   }
 }
 @media only screen and (min-width: 1441px) {
-  .circle-shape::before, .section-title.circle-shape::before {
+  .circle-shape::before,
+  .section-title.circle-shape::before {
     width: 120px;
     height: 120px;
   }
@@ -381,7 +395,8 @@ hr {
     font-size: 48px;
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .section-title {
     font-size: 64px;
   }
@@ -648,7 +663,7 @@ hr {
 
 .gap-x-4 {
   -moz-column-gap: 16px !important;
-       column-gap: 16px !important;
+  column-gap: 16px !important;
 }
 
 .gap-y-5 {
@@ -668,7 +683,9 @@ hr {
   line-height: 48px;
   letter-spacing: -1.5px;
   color: white;
-  text-shadow: 1px 1px 0 rgba(8, 8, 8, 0.4), -1px -1px 0 rgba(8, 8, 8, 0.4), 1px -1px 0 rgba(8, 8, 8, 0.4), -1px 1px 0 rgba(8, 8, 8, 0.4), 1px 1px 0 rgba(8, 8, 8, 0.4);
+  text-shadow: 1px 1px 0 rgba(8, 8, 8, 0.4), -1px -1px 0 rgba(8, 8, 8, 0.4),
+    1px -1px 0 rgba(8, 8, 8, 0.4), -1px 1px 0 rgba(8, 8, 8, 0.4),
+    1px 1px 0 rgba(8, 8, 8, 0.4);
 }
 
 .text-black-text-800 {
@@ -680,7 +697,9 @@ hr {
   padding-bottom: 40px;
   background-color: rgba(8, 8, 8, 0.04);
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .featured-properties {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -693,11 +712,11 @@ a {
 }
 
 .success {
-  color: #4CAF50;
+  color: #4caf50;
 }
 
 .error {
-  color: #F44336;
+  color: #f44336;
 }
 
 .counter:not(.is-visible) {
@@ -718,7 +737,7 @@ a {
   top: 2px;
   width: 8px;
   height: 8px;
-  background-color: #FF9330;
+  background-color: #ff9330;
   position: absolute;
   top: 50%;
   left: 0;
@@ -809,7 +828,7 @@ a {
 }
 
 .fill-primary {
-  fill: #FFB646;
+  fill: #ffb646;
 }
 
 .mb-120 {
@@ -836,7 +855,8 @@ a {
   padding-left: 16px;
   padding-right: 16px;
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .banner-contents {
     padding-left: 0px;
     padding-right: 0px;
@@ -863,7 +883,8 @@ a {
   gap: 23px;
 }
 
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .header {
     padding-left: 48px;
   }
@@ -872,7 +893,8 @@ a {
 .header-inner {
   padding-left: 16px;
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .header-inner {
     padding-left: 0;
   }
@@ -892,19 +914,19 @@ a {
   font-size: 15px;
 }
 .contact-link:hover {
-  color: #FF9330 !important;
+  color: #ff9330 !important;
 }
 .contact-link:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .contact-link:hover {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
   }
 }
 .contact-link.hover-text-white:hover {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
 }
 
 .animate-arrow-up {
@@ -954,7 +976,9 @@ a {
   width: 350px !important;
   min-height: 700px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .offcanvas {
     width: 460px !important;
   }
@@ -983,18 +1007,24 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .offcanvas-menu-item:hover a {
-  color: #FF9330 !important;
+  color: #ff9330 !important;
 }
 .offcanvas-menu-item:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 
 .offcanvas-menu-link {
   transition-duration: 300ms;
-  transition-property: color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, fill, stroke,
+    opacity, box-shadow, transform, filter, -webkit-text-decoration-color,
+    -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter;
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter,
+    backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
@@ -1003,10 +1033,11 @@ a {
   transition-duration: 300ms;
 }
 .offcanvas-social-links li a:hover {
-  color: #FF9330 !important;
+  color: #ff9330 !important;
 }
 
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .white-header {
     padding-left: 3rem;
   }
@@ -1015,7 +1046,8 @@ a {
 .white-bg-header {
   padding-left: 1rem;
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .white-bg-header {
     padding-left: 0px;
   }
@@ -1025,11 +1057,11 @@ a {
   color: rgba(8, 8, 8, 0.95);
 }
 .contact-link-warning:hover {
-  color: #FF9330;
+  color: #ff9330;
 }
 .contact-link-warning:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 
 .footer {
@@ -1041,7 +1073,8 @@ a {
     padding-top: 60px;
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .footer {
     padding-top: 60px;
   }
@@ -1056,11 +1089,11 @@ a {
   border-radius: 1rem;
 }
 .service-contact-card-footer:hover a {
-  color: #FF9330 !important;
+  color: #ff9330 !important;
 }
 .service-contact-card-footer:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 
 .footer-grid {
@@ -1080,7 +1113,9 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .footer-grid {
     gap: 1.5rem;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1088,7 +1123,7 @@ a {
 }
 
 #scrollUp:hover span {
-  color: #FF9330 !important;
+  color: #ff9330 !important;
 }
 
 .copyright {
@@ -1120,11 +1155,12 @@ a {
 } */
 
 .footer-social-link:hover {
-  color: #FF9330 !important;
+  color: #ff9330 !important;
 }
 
 /* call module that you want to import */
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .hero-content-wrapper {
     padding-top: 48px;
   }
@@ -1133,7 +1169,9 @@ a {
 .hello-iam {
   margin-bottom: 12px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .hello-iam {
     font-size: 32px;
   }
@@ -1178,7 +1216,8 @@ a {
     font-size: 20px;
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .iam-designer {
     font-size: 24px;
   }
@@ -1218,7 +1257,9 @@ a {
   bottom: 200px;
   right: 40px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .contact-spin svg {
     right: 150px;
     bottom: 80px;
@@ -1228,7 +1269,8 @@ a {
 .hero-btn-wraper {
   margin-bottom: 50px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  only screen and (min-width: 992px) and (max-width: 1199px) {
   .hero-btn-wraper {
     margin-bottom: 50px;
   }
@@ -1247,7 +1289,7 @@ a {
 .animate-spin {
   transform-origin: center;
   -webkit-animation: animateSpin 7s linear infinite;
-          animation: animateSpin 7s linear infinite;
+  animation: animateSpin 7s linear infinite;
 }
 
 @-webkit-keyframes animateSpin {
@@ -1277,10 +1319,10 @@ a {
 }
 .social-links ul {
   -moz-column-gap: 16px;
-       column-gap: 16px;
+  column-gap: 16px;
 }
 .social-links a:hover {
-  color: #FF9330 !important;
+  color: #ff9330 !important;
 }
 
 .service-card {
@@ -1290,22 +1332,22 @@ a {
   transition: all 0.3s;
 }
 .service-card:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 36px 100px 0px rgba(8, 8, 8, 0.15);
 }
 .service-card:hover .service-icon {
   background-color: rgba(8, 8, 8, 0.04);
 }
 .service-card:hover a {
-  color: #FF9330;
+  color: #ff9330;
 }
 .service-card:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 
 .service-icon {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   width: 48px;
   height: 48px;
@@ -1332,10 +1374,11 @@ a {
 }
 .service-contact-card:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .say-hello-email {
     font-size: 26px;
   }
@@ -1344,7 +1387,8 @@ a {
 .about-grid-space-right {
   padding-left: 60px;
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .about-grid-space-right {
     padding-left: 95px;
   }
@@ -1370,7 +1414,8 @@ a {
   font-size: 65px;
   z-index: 1;
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .years-experience-of-number {
     font-size: 80px;
   }
@@ -1383,7 +1428,7 @@ a {
   z-index: -1;
   width: 95px;
   height: 95px;
-  background-color: #FFB646;
+  background-color: #ffb646;
   display: block;
   transform: translateY(-50%);
   border-radius: 100%;
@@ -1394,7 +1439,8 @@ a {
     height: 100px;
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .years-experience-of-number::before {
     width: 110px;
     height: 110px;
@@ -1413,7 +1459,8 @@ a {
     line-height: 36px;
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .based-in-german-title {
     font-size: 44px;
   }
@@ -1452,12 +1499,15 @@ a {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 60px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .about-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .about-grid {
     gap: 134px;
   }
@@ -1468,13 +1518,16 @@ a {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1.5rem;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .about-grid-section-two {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 60px;
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .about-grid-section-two {
     gap: 134px;
   }
@@ -1489,9 +1542,10 @@ a {
 }
 .say-hello-contact-box:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .say-hello-contact-box h4 {
     font-size: 32px;
   }
@@ -1512,7 +1566,7 @@ a {
   transform: translate(-50%, -50%) scale(1.05);
 }
 .video-popup svg circle {
-  fill: #FFB646;
+  fill: #ffb646;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
@@ -1522,7 +1576,7 @@ a {
   stroke: #080808;
 }
 .video-popup:hover circle {
-  fill: #FFE600;
+  fill: #ffe600;
 }
 .video-popup:hover path {
   stroke: #fff;
@@ -1533,12 +1587,15 @@ a {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   gap: 1.5rem;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .about-me-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .about-me-grid {
     gap: 0px;
   }
@@ -1606,7 +1663,7 @@ a {
 }
 .experience-tab-item:hover {
   box-shadow: 0px 36px 100px 0px rgba(8, 8, 8, 0.05);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .education-tab-contents {
@@ -1632,14 +1689,16 @@ a {
     gap: 60px;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .education-tab-item {
     gap: 100px;
   }
 }
 .education-tab-item:hover {
   box-shadow: 0px 36px 100px 0px rgba(8, 8, 8, 0.05);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .skills-tab-contents {
@@ -1662,7 +1721,8 @@ a {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .skills-tab-contents {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1681,7 +1741,7 @@ a {
 }
 .skills-tab-item:hover {
   box-shadow: 0px 36px 100px 0px rgba(8, 8, 8, 0.05);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .awards-tab-contents {
@@ -1706,7 +1766,7 @@ a {
 }
 .awards-tab-item:hover {
   box-shadow: 0px 36px 100px 0px rgba(8, 8, 8, 0.05);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .portfolio-tag-link {
@@ -1721,16 +1781,16 @@ a {
 }
 .portfolio-tag-link:hover {
   background-color: rgba(8, 8, 8, 0.95);
-  color: #FFFFFF;
+  color: #ffffff;
   border-color: rgba(8, 8, 8, 0.95);
 }
 
 .portfolio-title:hover a {
-  color: #FF9330;
+  color: #ff9330;
 }
 .portfolio-title:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 
 .portfolio-link {
@@ -1742,24 +1802,22 @@ a {
     font-size: 24px;
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
-  .portfolio-link {
-    font-size: 32px;
-  }
-}
+
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .testimonial-title-section {
     text-align: center;
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .testimonial-title-section {
     text-align: left;
   }
 }
 
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .testimonial-space-left {
     padding-right: 0;
   }
@@ -1782,18 +1840,18 @@ a {
 
 .testimonial-gap {
   -moz-column-gap: 55px;
-       column-gap: 55px;
+  column-gap: 55px;
 }
 @media only screen and (min-width: 1441px) {
   .testimonial-gap {
     -moz-column-gap: 100px;
-         column-gap: 100px;
+    column-gap: 100px;
   }
 }
 @media only screen and (min-width: 1920px) {
   .testimonial-gap {
     -moz-column-gap: 165px;
-         column-gap: 165px;
+    column-gap: 165px;
   }
 }
 
@@ -1819,7 +1877,8 @@ a {
     line-height: 1.75rem;
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .testimonial-texts {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -1853,14 +1912,15 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .blog-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
 .blog-meta-item {
-  padding-left: 30px;
+  padding-left: 15px;
   position: relative;
   z-index: 1;
 }
@@ -1872,7 +1932,7 @@ a {
   display: block;
   position: absolute;
   top: 50%;
-  left: 15px;
+  left: 0px;
   z-index: -1;
   transform: translateY(-50%);
 }
@@ -1883,18 +1943,18 @@ a {
   color: rgba(8, 8, 8, 0.8);
 }
 .blog-meta-item:last-child::before {
-  background-color: #FF9330;
+  background-color: #ff9330;
 }
 .blog-meta-item:last-child a {
-  color: #FF9330;
+  color: #ff9330;
 }
 
 .blog-title-section:hover a {
-  color: #FF9330;
+  color: #ff9330;
 }
 .blog-title-section:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 
 .blog-title {
@@ -1924,7 +1984,7 @@ a {
 
 .blog-clients-info {
   -moz-column-gap: 80px;
-       column-gap: 80px;
+  column-gap: 80px;
   row-gap: 24px;
   padding-bottom: 32px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -1939,7 +1999,7 @@ a {
   transition-duration: 300ms;
 }
 .blog-social-link:hover {
-  color: #FF9330;
+  color: #ff9330;
 }
 
 .pricing-title-section {
@@ -1950,7 +2010,8 @@ a {
     max-width: 400px;
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .pricing-title-section {
     max-width: 527px;
   }
@@ -1959,7 +2020,10 @@ a {
 .contact-for-custom-project {
   margin-top: 2rem;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .contact-for-custom-project {
     margin-top: 0;
   }
@@ -1980,7 +2044,8 @@ a {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .prcing-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1997,16 +2062,17 @@ a {
 }
 .pricing-item:hover {
   box-shadow: 0px 36px 100px 0px rgba(8, 8, 8, 0.05);
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 .pricing-item:hover a {
-  color: #FF9330;
+  color: #ff9330;
 }
 .pricing-item:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
-@media only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .pricing-item {
     padding: 2rem;
     gap: 3rem;
@@ -2018,7 +2084,7 @@ a {
 }
 
 .pricing-rate {
-  color: #FF9330;
+  color: #ff9330;
 }
 
 .project-item {
@@ -2050,6 +2116,7 @@ a {
 
 .project-title {
   text-transform: capitalize;
+  text-align: left;
   font-size: 17px;
 }
 @media only screen and (min-width: 576px) {
@@ -2079,24 +2146,26 @@ a {
 }
 
 .project-item-contet-wrap a {
-  color: #FFFFFF;
+  color: #ffffff;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
   transition-duration: 300ms;
 }
 .project-item-contet-wrap:hover a {
-  color: #FF9330;
+  color: #ff9330;
 }
 .project-item-contet-wrap:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
-          animation: moveUp 0.8s linear;
+  animation: moveUp 0.8s linear;
 }
 
 .banner-title {
   font-size: 32px;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .banner-title {
     font-size: 44px;
   }
@@ -2119,7 +2188,10 @@ a {
   margin-top: -130px;
   padding-top: 130px;
 }
-@media only screen and (min-width: 768px) and (max-width: 991px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1280px) and (max-width: 1440px), only screen and (min-width: 1441px) {
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  only screen and (min-width: 992px) and (max-width: 1199px),
+  only screen and (min-width: 1280px) and (max-width: 1440px),
+  only screen and (min-width: 1441px) {
   .project-details-section {
     margin-top: -280px;
     padding-top: 280px;
@@ -2174,7 +2246,8 @@ a {
   opacity: 1;
   color: rgba(8, 8, 8, 0.6);
 }
-.contact-form-control::placeholder, .contact-form-control:focus {
+.contact-form-control::placeholder,
+.contact-form-control:focus {
   opacity: 1;
   color: rgba(8, 8, 8, 0.6);
 }
@@ -2195,9 +2268,8 @@ textarea.contact-form-control {
   transition-duration: 300ms;
 }
 .contact-social-link:hover {
-  color: #FF9330;
+  color: #ff9330;
 }
-
 
 .brand-carousel {
   padding-top: 1.5rem;
@@ -2208,4 +2280,41 @@ textarea.contact-form-control {
 
 .signature {
   margin-left: -30px;
+}
+
+.hover-primary:hover {
+  color: #ff9330 !important;
+}
+
+.project-item {
+  aspect-ratio: 1 / 1; /* Force a 1:1 aspect ratio (square) */
+  height: auto; /* Let width define height via aspect-ratio */
+  overflow: hidden; /* Ensure content/image doesn't spill out */
+}
+
+.project-item .project-item-img {
+  /* Target the image inside */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Scale the image to cover the container, cropping if necessary */
+  object-position: center; /* Center the image within the container */
+  transition: transform 0.4s ease; /* Optional: Add back transition if it was removed */
+}
+
+.project-item:hover .project-item-img {
+  transform: scale(1.05);
+  filter: brightness(0.6);
+}
+
+.project-item-img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.homepage-project-item-img-wrapper {
+  aspect-ratio: 1 / 1;
+}
+
+.homepage-project-item-img {
+  width: 100%;
+  height: 100%;
 }
