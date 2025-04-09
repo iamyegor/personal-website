@@ -203,7 +203,7 @@ hr {
   font-size: 18px;
   line-height: 28px;
   font-weight: 400;
-  color: rgba(8, 8, 8, 0.6);
+  /* color: rgba(8, 8, 8, 0.6); */
 }
 
 .font-Syne {
@@ -633,8 +633,16 @@ hr {
   padding-bottom: 120px;
 }
 
+.pb-60 {
+  padding-bottom: 60px;
+}
+
 .gap-2 {
   gap: 8px !important;
+}
+
+.gx-sm-4 {
+  column-gap: 16px;
 }
 
 .row-gap-24 {
@@ -909,6 +917,7 @@ a {
 }
 
 .contact-link {
+  display: none !important;
   margin-right: 8px;
   padding: 6px 12px;
   font-size: 15px;
@@ -927,6 +936,12 @@ a {
 }
 .contact-link.hover-text-white:hover {
   color: #ffffff !important;
+}
+
+@media (min-width: 400px) {
+  .contact-link {
+    display: flex !important;
+  }
 }
 
 .animate-arrow-up {
@@ -1098,30 +1113,67 @@ a {
 
 .footer-grid {
   display: flex;
-  gap: 1.25rem;
+  flex-direction: column;
+  gap: 32px;
   margin-bottom: 70px;
-  justify-content: space-between;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-@media only screen and (min-width: 576px) {
+
+.footer-grid > .footer-grid-item-1 {
+  order: 1;
+}
+
+.footer-grid > .footer-grid-item-2 {
+  order: 2;
+}
+
+@media (min-width: 762px) {
   .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 12px;
   }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  .footer-grid > .footer-grid-item-1 {
+    flex-basis: 50%;
+    order: 1;
   }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px),
-  only screen and (min-width: 1280px) and (max-width: 1440px),
-  only screen and (min-width: 1441px) {
-  .footer-grid {
-    gap: 1.5rem;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .footer-grid > .footer-grid-item-2 {
+    flex-basis: 45%;
+    order: 2;
   }
 }
 
+.footer-socials {
+  margin-top: 24px;
+  gap: 12px;
+}
+
+@media (min-width: 762px) {
+  .footer-socials {
+    margin-top: 48px;
+  }
+}
+
+.footer-email-text {
+  font-size: 16px;
+}
+
+@media (min-width: 480px) {
+  .footer-email-text {
+    font-size: 30px;
+  }
+}
+
+.footer-email-title-text {
+  font-size: 14px;
+}
+
+@media (min-width: 480px) {
+  .footer-email-title-text {
+    font-size: 26px;
+  }
+}
 #scrollUp:hover span {
   color: #ff9330 !important;
 }
@@ -1793,16 +1845,44 @@ a {
   animation: moveUp 0.8s linear;
 }
 
+.project-link-arrow {
+  display: none;
+}
+
+@media (min-width: 450px) and (max-width: 750px) {
+  .project-link-arrow {
+    display: block;
+  }
+}
+
+@media (min-width: 1440px) {
+  .project-link-arrow {
+    display: block;
+  }
+}
+
 .portfolio-link {
   font-size: 20px;
+
   text-transform: capitalize;
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+.portfolio-link > a {
+  line-height: 1.1;
+  text-align: left;
+}
+
+@media (min-width: 760px) {
   .portfolio-link {
     font-size: 24px;
   }
 }
 
+@media (min-width: 1120px) {
+  .portfolio-link {
+    font-size: 20px;
+  }
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .testimonial-title-section {
@@ -2115,6 +2195,7 @@ a {
 }
 
 .project-title {
+  width: 100%;
   text-transform: capitalize;
   text-align: left;
   font-size: 17px;
@@ -2133,6 +2214,10 @@ a {
   .project-title {
     font-size: 28px;
   }
+}
+
+.project-title a {
+  text-align: center;
 }
 
 .project-item-content {
@@ -2161,6 +2246,7 @@ a {
 }
 
 .banner-title {
+  line-height: 1.1;
   font-size: 32px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px),
@@ -2168,6 +2254,12 @@ a {
   only screen and (min-width: 1441px) {
   .banner-title {
     font-size: 44px;
+  }
+}
+
+@media (max-width: 450px) {
+  .clients-info {
+    padding-left: 0 !important;
   }
 }
 
@@ -2317,4 +2409,36 @@ textarea.contact-form-control {
 .homepage-project-item-img {
   width: 100%;
   height: 100%;
+}
+
+.project-details-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 350px) {
+  .project-details-image {
+    height: 300px;
+  }
+}
+
+@media (min-width: 500px) {
+  .project-details-image {
+    height: 500px;
+  }
+}
+
+@media (min-width: 650px) {
+  .project-details-image {
+    height: 700px
+  }
+}
+
+.related-project-image {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  object-position: center;
 }

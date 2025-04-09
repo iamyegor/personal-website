@@ -2,43 +2,43 @@ const projectsData = [
   {
     name: "Reform Proposal Hub", // Example name
     previewImage: "reform-hub/preview.webp",
-    link: "project-details-reform-hub.html", // Link to the specific project detail page
+    link: "projects/reform-hub.html", // Link to the specific project detail page
   },
   {
     name: "NetIQ - AI Chat",
     previewImage: "netiq/preview.webp",
-    link: "project-details-netiq.html",
+    link: "projects/netiq.html",
   },
   {
     name: "Visa Appointments Booking Bot",
     previewImage: "nepal-to-korea/preview.webp",
-    link: "project-details-visa-bot.html",
+    link: "projects/visa-bot.html",
   },
   {
     name: "Krijji - E-commerce Store",
     previewImage: "krijji/preview.webp",
-    link: "project-details-krijji.html",
+    link: "projects/krijji.html",
   },
 
   {
     name: "Attire - E-commerce Store",
     previewImage: "attire/preview.webp",
-    link: "project-details-attire.html",
+    link: "projects/attire.html",
   },
   {
     name: "Duchess - Gym Website",
     previewImage: "duchess/preview.webp",
-    link: "project-details-duchess.html",
+    link: "projects/duchess.html",
   },
   {
     name: "OditGroup - Intro Page",
     previewImage: "oditgroup/preview.webp",
-    link: "project-details-oditgroup.html",
+    link: "projects/oditgroup.html",
   },
   {
     name: "TopPoizon - Landing Page",
     previewImage: "toppoizon/preview.webp",
-    link: "project-details-toppoizon.html",
+    link: "projects/toppoizon.html",
   },
 ]
 
