@@ -2263,16 +2263,8 @@ a {
   }
 }
 
-.clients-info-item {
-  width: 50%;
-}
-@media only screen and (min-width: 576px) {
-  .clients-info-item {
-    width: 33.333333%;
-  }
-}
-
 .clients-info-text {
+  width: 100% ;
   color: rgba(8, 8, 8, 0.8);
 }
 
@@ -2438,7 +2430,26 @@ textarea.contact-form-control {
 
 .related-project-image {
   width: 100%;
-  height: 460px;
+  height: 300px;
   object-fit: cover;
   object-position: center;
 }
+
+@media (min-width: 500px) {
+  .related-project-image {
+    height: 460px;
+  }
+}
+
+@media (min-width: 768px) {
+  .related-project-image {
+    height: 260px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .related-project-image {
+    height: 460px;
+  }
+}
+

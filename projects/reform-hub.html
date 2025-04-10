@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Full-Stack Developer Egor Bobrov</title>
+    <meta name="AdsBot-Google" content="noindex follow" />
+    <meta name="description" content="Full-Stack Developer Egor Bobrov" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/images/favicon.png"
+    />
+
+    <!-- CSS (Font, Vendor, Icon, Plugins & Style CSS files) -->
+
+    <!-- Font CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;0,9..40,1000;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700;1,9..40,800;1,9..40,900;1,9..40,1000&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS (Bootstrap & Icon Font) -->
+    <link rel="stylesheet" href="../assets/css/vendor/bootstrap.min.css" />
+
+    <!-- Plugins CSS (All Plugins Files) -->
+    <link rel="stylesheet" href="../assets/css/plugins/aos.css" />
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="../assets/css/pages/home.css" />
+  </head>
+
+  <body>
+    <div class="overflow-x-hidden">
+      <!-- Header start -->
+
+      <header id="sticky-header" class="header bg-white">
+        <div class="d-flex white-bg-header">
+          <div class="flex-1 d-flex align-items-center justify-content-between">
+            <a href="../index.html">
+              <img src="../assets/images/logo/logo.png" alt="logo" />
+            </a>
+
+            <!-- Link Start -->
+            <a
+              href="../contact.html"
+              class="d-flex align-items-center flex-wrap py-6px px-3 text-15 fw-bold text-active leading-none mr-2 transition-all contact-link contact-link-warning"
+              >Let’s Talk
+              <span class="d-inline-block ml-3 animate-arrow-up">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 17L17 7"
+                    stroke="currentColor"
+                    stroke-opacity="0.9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M7 7H17V17"
+                    stroke="currentColor"
+                    stroke-opacity="0.9"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </a>
+            <!-- Link End -->
+          </div>
+
+          <!-- Button Start -->
+          <div class="flex-none">
+            <button
+              id="offcanvas-toggle"
+              class="border-0 bg-dark d-flex align-align-items-center flex-wrap justify-content-center py-7 px-38"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#offcanvas"
+              aria-controls="offcanvas"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <rect x="3" y="8" width="18" height="2" fill="white" />
+                <rect x="3" y="14" width="18" height="2" fill="white" />
+              </svg>
+            </button>
+          </div>
+          <!-- Button End -->
+        </div>
+      </header>
+
+      <!-- sidebar start -->
+      <div
+        id="offcanvas"
+        class="offcanvas offcanvas-end bg-dark d-flex flex-wrap flex-column justify-content-between"
+      >
+        <!-- close button start -->
+
+        <div>
+          <div
+            class="d-flex flex-wrap justify-content-between align-items-center offcanvas-header"
+          >
+            <a href="../index.html">
+              <img src="../assets/images/logo/offcanvas-logo.png" alt="" />
+            </a>
+            <button
+              id="offcanvas-close"
+              class="offcanvas-close bg-primary border-0"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z"
+                  fill="white"
+                />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <!-- close button end -->
+
+          <nav
+            class="offcanvas-nav d-flex flex-wrap flex-column justify-content-between"
+          >
+            <ul class="offcanvas-menu p-0 list-unstyled">
+              <li class="offcanvas-menu-item">
+                <a
+                  href="../index.html"
+                  class="text-white text-xl fw-bold font-Syne leading-none d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link"
+                  >Home
+                  <span class="d-inline-block animate-arrow-up">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 17L17 7"
+                        stroke="currentColor"
+                        stroke-opacity="0.9"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M7 7H17V17"
+                        stroke="currentColor"
+                        stroke-opacity="0.9"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li class="offcanvas-menu-item">
+                <a
+                  href="../about.html"
+                  class="text-white text-xl fw-bold font-Syne leading-none d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link"
+                  >About me
+                  <span class="d-inline-block animate-arrow-up">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 17L17 7"
+                        stroke="currentColor"
+                        stroke-opacity="0.9"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M7 7H17V17"
+                        stroke="currentColor"
+                        stroke-opacity="0.9"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li class="offcanvas-menu-item">
+                <a
+                  href="../projects.html"
+                  class="text-white text-xl fw-bold font-Syne leading-none d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link"
+                  >Projects
+                  <span class="d-inline-block animate-arrow-up">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 17L17 7"
+                        stroke="currentColor"
+                        stroke-opacity="0.9"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M7 7H17V17"
+                        stroke="currentColor"
+                        stroke-opacity="0.9"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li class="offcanvas-menu-item">
+                <a
+                  href="../contact.html"
+                  class="text-white text-xl fw-bold font-Syne leading-none d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link"
+                  >Contact me
+                  <span class="d-inline-block animate-arrow-up">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7 17L17 7"
+                        stroke="currentColor"
+                        stroke-opacity="0.9"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                      <path
+                        d="M7 7H17V17"
+                        stroke="currentColor"
+                        stroke-opacity="0.9"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <nav class="pb-10">
+          <ul
+            class="d-flex flex-wrap gap-x-4 align-items-center offcanvas-social-links p-0 list-unstyled"
+          >
+            <li>
+              <a
+                href="https://www.linkedin.com/in/egor-bob/"
+                class="text-white transition-all"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6.94043 5.00002C6.94017 5.53046 6.7292 6.03906 6.35394 6.41394C5.97868 6.78883 5.46986 6.99929 4.93943 6.99902C4.409 6.99876 3.90039 6.78779 3.52551 6.41253C3.15062 6.03727 2.94016 5.52846 2.94043 4.99802C2.9407 4.46759 3.15166 3.95899 3.52692 3.5841C3.90218 3.20922 4.411 2.99876 4.94143 2.99902C5.47186 2.99929 5.98047 3.21026 6.35535 3.58552C6.73024 3.96078 6.9407 4.46959 6.94043 5.00002ZM7.00043 8.48002H3.00043V21H7.00043V8.48002ZM13.3204 8.48002H9.34043V21H13.2804V14.43C13.2804 10.77 18.0504 10.43 18.0504 14.43V21H22.0004V13.07C22.0004 6.90002 14.9404 7.13002 13.2804 10.16L13.3204 8.48002Z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/iamyegor"
+                class="text-white transition-all"
+                ><svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C1.99977 14.0992 2.65958 16.1454 3.88679 17.8484C5.114 19.5515 6.84631 20.8249 8.83798 21.488C9.33798 21.575 9.52598 21.275 9.52598 21.012C9.52598 20.775 9.51298 19.988 9.51298 19.15C7.00098 19.613 6.35098 18.538 6.15098 17.975C6.03798 17.687 5.55098 16.8 5.12598 16.562C4.77598 16.375 4.27598 15.912 5.11298 15.9C5.90098 15.887 6.46298 16.625 6.65098 16.925C7.55098 18.437 8.98798 18.012 9.56298 17.75C9.65098 17.1 9.91298 16.663 10.201 16.413C7.97598 16.163 5.65098 15.3 5.65098 11.475C5.65098 10.387 6.03798 9.488 6.67598 8.788C6.57598 8.538 6.22598 7.513 6.77598 6.138C6.77598 6.138 7.61298 5.875 9.52598 7.162C10.3401 6.9364 11.1812 6.82302 12.026 6.825C12.876 6.825 13.726 6.937 14.526 7.162C16.439 5.862 17.276 6.138 17.276 6.138C17.826 7.513 17.476 8.538 17.376 8.788C18.013 9.488 18.401 10.375 18.401 11.475C18.401 15.313 16.064 16.163 13.839 16.413C14.201 16.725 14.514 17.325 14.514 18.263C14.514 19.6 14.501 20.675 14.501 21.013C14.501 21.275 14.689 21.587 15.189 21.487C17.1738 20.8166 18.8985 19.5408 20.1203 17.8389C21.3421 16.1371 21.9995 14.095 22 12C22 6.475 17.525 2 12 2H12.001Z"
+                    fill="currentColor"
+                    fill-opacity="0.9"
+                  ></path>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://t.me/nastoyaschiG"
+                class="text-white transition-all"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <title>telegram_fill</title>
+                  <g
+                    id="telegram-1"
+                    stroke="none"
+                    stroke-width="1"
+                    fill="none"
+                    fill-rule="evenodd"
+                  >
+                    <g
+                      id="Brand"
+                      transform="translate(-672.000000, -48.000000)"
+                    >
+                      <g
+                        id="telegram_fill"
+                        transform="translate(672.000000, 48.000000)"
+                      >
+                        <path
+                          d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z"
+                          id="MingCute"
+                          fill-rule="nonzero"
+                        ></path>
+                        <path
+                          d="M19.7773,4.42984 C20.8652,3.97177 22.0315,4.8917 21.8394,6.05639 L19.5705,19.8131 C19.3517,21.1395 17.8949,21.9006 16.678,21.2396 C15.6597,20.6865 14.1489,19.8352 12.7873,18.9455 C12.1074,18.5012 10.0255,17.0766 10.2814,16.0625 C10.5002,15.1954 14.0001,11.9375 16.0001,10 C16.7857,9.23893 16.4279,8.79926 15.5001,9.5 C13.1985,11.2383 9.50332,13.8812 8.28136,14.625 C7.20323,15.2812 6.64031,15.3932 5.96886,15.2812 C4.74273,15.0769 3.60596,14.7605 2.67788,14.3758 C1.42351,13.8558 1.48461,12.132 2.67703,11.63 L19.7773,4.42984 Z"
+                          fill="currentColor"
+                          fill-opacity="0.9"
+                        ></path>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- sidebar end -->
+
+      <!-- Header end -->
+
+      <!-- Hero Section Start -->
+      <section class="bg-secondary pt-20">
+        <div
+          class="max-w-1075 mx-auto banner-contents"
+          data-aos="flip-down"
+          data-aos-delay="100"
+        >
+          <div class="row pb-12 text-dark mb-6">
+            <a
+              href="../projects.html"
+              class="d-flex align-items-center gap-2 hover-primary mb-4"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-left-icon lucide-arrow-left mb-1"
+              >
+                <path d="m12 19-7-7 7-7" />
+                <path d="M19 12H5" />
+              </svg>
+              <span class="">Projects</span>
+            </a>
+            <div class="col-12 col-lg-6 mb-4">
+              <h4 class="text-dark fw-bold font-Syne leading-snug banner-title">
+                Reform Proposal
+                <br />
+                Hub
+              </h4>
+            </div>
+            <div class="col-12 col-lg-6">
+              <ul class="flex-wrap clients-info">
+                <li
+                  class="d-flex flex-wrap flex-column gap-2 clients-info-item mb-4"
+                >
+                  <span
+                    class="clients-info-text text-sm fw-normal font-Inter leading-tight"
+                    >Link</span
+                  >
+                  <h4 class="text-15 leading-none">(Not for public use yet)</h4>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="row mb-12">
+            <div class="col-12">
+              <img
+                class="w-full rounded-20 project-details-image"
+                src="../assets/images/portfolios/reform-hub/preview.webp"
+                alt="banner"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Hero Section End -->
+
+      <!-- Overview Section Start -->
+      <section class="bg-white pb-120 project-details-section">
+        <div class="max-w-1075 mx-auto banner-contents">
+          <div class="grid grid-cols-1">
+            <h3 class="text-32 fw-bold font-Syne leading-10 mb-4">
+              Project Overview
+            </h3>
+            <p class="paragraph mb-6">
+              This project demonstrates the engineering of a specialized web
+              application designed to
+              <u>automate the extraction and structuring of data</u> from PDF
+              documents concerning German reforms. It processes documents
+              written in either German or English, consistently delivering
+              structured insights in English. The platform integrates AI for
+              sophisticated text analysis, employs asynchronous processing for
+              performance, and utilizes modern DevOps practices for reliable
+              deployment, showcasing the ability to build robust, data-centric
+              solutions.
+            </p>
+
+            <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
+              Key Technologies
+            </h4>
+            <ul class="fw-normal mb-6 list-unstyled paragraph">
+              <li>
+                <strong>Backend:</strong> ASP.NET Core, C#, Quartz.NET, SignalR,
+                FluentValidation
+              </li>
+              <li>
+                <strong>Frontend:</strong> React, TypeScript, React Query, React
+                Router
+              </li>
+              <li>
+                <strong>AI Integration:</strong> Google Gemini 2.0 Flash API
+              </li>
+              <li>
+                <strong>Database:</strong> PostgreSQL with Entity Framework Core
+                (EF Core)
+              </li>
+              <li>
+                <strong>Infrastructure & DevOps:</strong> Docker, Kubernetes
+                (K8s), GitHub Actions (CI/CD)
+              </li>
+            </ul>
+
+            <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
+              Backend Architecture and Implementation
+            </h4>
+            <p class="paragraph mb-4">
+              The backend leverages ASP.NET Core combined with
+              <u>Minimal APIs</u> to create efficient, lightweight endpoints
+              suitable for a focused application. A pragmatic
+              <u>Layered Architecture</u> was implemented to maintain clear
+              separation between presentation, application logic, and
+              infrastructure concerns, balancing structure with development
+              velocity for this specific use case.
+            </p>
+            <p class="paragraph mb-4">
+              A core challenge was handling the potentially time-consuming AI
+              analysis. This was addressed using <u>Quartz.NET</u> to manage
+              <u>asynchronous background jobs</u>. Upon PDF upload, tasks are
+              queued, decoupling heavy processing from the user request and
+              ensuring UI responsiveness. Quartz.NET provides reliability for
+              job execution.
+            </p>
+            <p class="paragraph mb-6">
+              To perform its core analytical task, the platform integrates with
+              <u>Google Gemini 2.0 Flash</u>. To accurately extract
+              approximately 20 distinct data fields from the document text, I
+              developed and utilize a strategy involving multiple,
+              parallel-executed, specialized prompts. I also implemented a retry
+              mechanism that handles potential AI response formatting issues,
+              enhancing reliability. Once the analysis is complete,
+              <u>SignalR</u> delivers real-time feedback directly to the user's
+              browser, eliminating the need for manual page refreshes.
+              Server-side validation using <u>FluentValidation </u>ensures that
+              invatiants are kept intact after the document submission.
+            </p>
+
+            <p class="paragraph mb-6">
+              Persistent data storage is handled by <u>PostgreSQL</u>, accessed
+              efficiently through <u>Entity Framework Core (EF Core)</u>.
+            </p>
+
+            <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
+              Frontend User Interface
+            </h4>
+            <p class="paragraph mb-4">
+              The UI is constructed using React and TypeScript, providing a
+              type-safe and component-based structure. A key element is the use
+              of <u>React Query</u> for <u>managing server state</u>. This
+              library significantly simplifies data fetching, caching, and
+              synchronization related to the backend processing status and
+              results. It handles loading/error states gracefully and
+              efficiently updates the UI when new data arrives via the SignalR
+              connection.
+            </p>
+            <p class="paragraph mb-6">
+              The user experience is designed for simplicity: upload a PDF,
+              receive immediate feedback that processing has started, and see
+              structured results appear dynamically. React Router manages
+              navigation. Client-side validation provides quick feedback,
+              complementing the backend rules. The interface ensures user
+              context (the document being processed) is maintained even if the
+              page is reloaded.
+            </p>
+
+            <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
+              Deployment Automation and Infrastructure
+            </h4>
+            <p class="paragraph mb-6">
+              Modern DevOps practices ensure automated and consistent
+              deployments. A <u>CI/CD pipeline</u> configured in GitHub Actions
+              automates the entire workflow: building the backend and frontend,
+              packaging them into <u>Docker containers</u>, and deploying these
+              containers to a <u>Kubernetes (K8s) cluster</u>. This
+              containerization ensures environmental consistency, while K8s
+              manages application scaling, deployment rollouts, and resilience.
+            </p>
+
+            <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
+              Conclusion
+            </h4>
+            <p class="paragraph mb-12">
+              This Reform Proposal Hub project demonstrates practical expertise
+              in building specialized, data-focused web applications. It
+              effectively <u>integrates AI for complex data extraction</u>,
+              utilizes <u>asynchronous patterns</u> (Quartz.NET) and
+              <u>real-time communication</u> (SignalR) for a responsive user
+              experience, and employs modern frontend state management
+              techniques (React Query). The implementation showcases strong
+              skills across the stack (ASP.NET Core, React, TypeScript,
+              PostgreSQL) and proficiency in contemporary DevOps workflows
+              (Docker, Kubernetes, CI/CD), representing the capability to
+              engineer and deploy robust, automated solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Overview Section End -->
+
+      <!-- Project Section Start -->
+      <section class="bg-white pb-120">
+        <div class="container">
+          <div class="row mb-n6">
+            <div class="col-12" data-aos="flip-down">
+              <div
+                class="fw-bold font-Syne text-center leading-none d-flex flex-wrap flex-column gap-y-2 mb-10"
+              >
+                <span class="text-warning text-xl">Portfolio</span>
+                <h3 class="section-title text-dark">
+                  Related
+                  <span class="position-relative circle-shape portfolio-shape"
+                    >wo</span
+                  >rk
+                </h3>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 mb-6" data-aos="flip-down">
+              <div class="rounded-20 overflow-hidden mb-6">
+                <img
+                  src="../assets/images/portfolios/netiq/preview.webp"
+                  class="related-project-image"
+                  alt="Project preview"
+                />
+              </div>
+              <div class="d-flex flex-wrap flex-column gap-3">
+                <div class="d-flex flex-wrap gap-2">
+                  <a
+                    class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
+                    href="../projects.html"
+                    >WEB</a
+                  >
+                  <a
+                    class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
+                    href="../projects.html"
+                    >AI</a
+                  >
+                  <a
+                    class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
+                    href="../projects.html"
+                    >DEVELOPMENT</a
+                  >
+                </div>
+                <div
+                  class="d-flex flex-wrap align-items-center justify-content-between text-dark portfolio-title"
+                >
+                  <h4
+                    class="fw-bold font-Syne text-center leading-10 portfolio-link"
+                  >
+                    <a class="transition-all" href="netiq.html"
+                      >NetIQ - AI Chat</a
+                    >
+                  </h4>
+                  <a
+                    class="animate-arrow-up project-link-arrow"
+                    href="netiq.html"
+                  >
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M30.8839 9.11612C31.372 9.60427 31.372 10.3957 30.8839 10.8839L10.8839 30.8839C10.3957 31.372 9.60427 31.372 9.11612 30.8839C8.62796 30.3957 8.62796 29.6043 9.11612 29.1161L29.1161 9.11612C29.6043 8.62796 30.3957 8.62796 30.8839 9.11612Z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.5 10C12.5 9.30964 13.0596 8.75 13.75 8.75H30C30.6904 8.75 31.25 9.30964 31.25 10V26.25C31.25 26.9404 30.6904 27.5 30 27.5C29.3096 27.5 28.75 26.9404 28.75 26.25V11.25H13.75C13.0596 11.25 12.5 10.6904 12.5 10Z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-12 col-md-6 mb-6"
+              data-aos="flip-down"
+              data-aos-delay="100"
+            >
+              <div class="rounded-20 overflow-hidden mb-6">
+                <img
+                  src="../assets/images/portfolios/krijji/preview.webp"
+                  alt="Project preview"
+                  class="related-project-image"
+                />
+              </div>
+              <div class="d-flex flex-wrap flex-column gap-3">
+                <div class="d-flex flex-wrap gap-2">
+                  <a
+                    class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
+                    href="../projects.html"
+                    >WEB</a
+                  >
+                  <a
+                    class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
+                    href="../projects.html"
+                    >DEVELOPMENT</a
+                  >
+                </div>
+                <div
+                  class="d-flex flex-wrap align-items-center justify-content-between text-dark portfolio-title"
+                >
+                  <h4
+                    class="fw-bold font-Syne text-center leading-10 portfolio-link"
+                  >
+                    <a class="transition-all" href="krijji.html"
+                      >Krijji - Currency Converter</a
+                    >
+                  </h4>
+                  <a
+                    class="animate-arrow-up project-link-arrow"
+                    href="krijji.html"
+                  >
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M30.8839 9.11612C31.372 9.60427 31.372 10.3957 30.8839 10.8839L10.8839 30.8839C10.3957 31.372 9.60427 31.372 9.11612 30.8839C8.62796 30.3957 8.62796 29.6043 9.11612 29.1161L29.1161 9.11612C29.6043 8.62796 30.3957 8.62796 30.8839 9.11612Z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.5 10C12.5 9.30964 13.0596 8.75 13.75 8.75H30C30.6904 8.75 31.25 9.30964 31.25 10V26.25C31.25 26.9404 30.6904 27.5 30 27.5C29.3096 27.5 28.75 26.9404 28.75 26.25V11.25H13.75C13.0596 11.25 12.5 10.6904 12.5 10Z"
+                        fill="currentColor"
+                        fill-opacity="0.9"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Project Section End -->
+
+      <!-- Footer Start -->
+      <footer class="footer bg-dark">
+        <div class="container">
+          <div class="overflow-x-hidden" data-aos="flip-down">
+            <div class="footer-grid">
+              <div class="pt-12 footer-grid-item-1">
+                <h3 class="section-title text-white mb-0">
+                  <span class="position-relative circle-shape footer-shape"
+                    >Let's</span
+                  >
+                  <br />
+                  work together
+                </h3>
+                <div class="d-flex flex-wrap align-items-center footer-socials">
+                  <div class="footer-social">
+                    <ul
+                      class="d-flex flex-wrap gap-x-4 align-items-center list-unstyled p-0 footer-social-links"
+                    >
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/in/egor-bob/"
+                          class="text-white footer-social-link"
+                          ><svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M6.94043 5.00002C6.94017 5.53046 6.7292 6.03906 6.35394 6.41394C5.97868 6.78883 5.46986 6.99929 4.93943 6.99902C4.409 6.99876 3.90039 6.78779 3.52551 6.41253C3.15062 6.03727 2.94016 5.52846 2.94043 4.99802C2.9407 4.46759 3.15166 3.95899 3.52692 3.5841C3.90218 3.20922 4.411 2.99876 4.94143 2.99902C5.47186 2.99929 5.98047 3.21026 6.35535 3.58552C6.73024 3.96078 6.9407 4.46959 6.94043 5.00002ZM7.00043 8.48002H3.00043V21H7.00043V8.48002ZM13.3204 8.48002H9.34043V21H13.2804V14.43C13.2804 10.77 18.0504 10.43 18.0504 14.43V21H22.0004V13.07C22.0004 6.90002 14.9404 7.13002 13.2804 10.16L13.3204 8.48002Z"
+                              fill="currentColor"
+                              fill-opacity="0.9"
+                            ></path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://github.com/iamyegor"
+                          class="text-white footer-social-link"
+                          ><svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C1.99977 14.0992 2.65958 16.1454 3.88679 17.8484C5.114 19.5515 6.84631 20.8249 8.83798 21.488C9.33798 21.575 9.52598 21.275 9.52598 21.012C9.52598 20.775 9.51298 19.988 9.51298 19.15C7.00098 19.613 6.35098 18.538 6.15098 17.975C6.03798 17.687 5.55098 16.8 5.12598 16.562C4.77598 16.375 4.27598 15.912 5.11298 15.9C5.90098 15.887 6.46298 16.625 6.65098 16.925C7.55098 18.437 8.98798 18.012 9.56298 17.75C9.65098 17.1 9.91298 16.663 10.201 16.413C7.97598 16.163 5.65098 15.3 5.65098 11.475C5.65098 10.387 6.03798 9.488 6.67598 8.788C6.57598 8.538 6.22598 7.513 6.77598 6.138C6.77598 6.138 7.61298 5.875 9.52598 7.162C10.3401 6.9364 11.1812 6.82302 12.026 6.825C12.876 6.825 13.726 6.937 14.526 7.162C16.439 5.862 17.276 6.138 17.276 6.138C17.826 7.513 17.476 8.538 17.376 8.788C18.013 9.488 18.401 10.375 18.401 11.475C18.401 15.313 16.064 16.163 13.839 16.413C14.201 16.725 14.514 17.325 14.514 18.263C14.514 19.6 14.501 20.675 14.501 21.013C14.501 21.275 14.689 21.587 15.189 21.487C17.1738 20.8166 18.8985 19.5408 20.1203 17.8389C21.3421 16.1371 21.9995 14.095 22 12C22 6.475 17.525 2 12 2H12.001Z"
+                              fill="currentColor"
+                              fill-opacity="0.9"
+                            ></path>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="https://t.me/nastoyaschiG"
+                          class="text-white footer-social-link"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                          >
+                            <title>telegram_fill</title>
+                            <g
+                              id="telegram-1"
+                              stroke="none"
+                              stroke-width="1"
+                              fill="none"
+                              fill-rule="evenodd"
+                            >
+                              <g
+                                id="Brand"
+                                transform="translate(-672.000000, -48.000000)"
+                              >
+                                <g
+                                  id="telegram_fill"
+                                  transform="translate(672.000000, 48.000000)"
+                                >
+                                  <path
+                                    d="M24,0 L24,24 L0,24 L0,0 L24,0 Z M12.5934901,23.257841 L12.5819402,23.2595131 L12.5108777,23.2950439 L12.4918791,23.2987469 L12.4918791,23.2987469 L12.4767152,23.2950439 L12.4056548,23.2595131 C12.3958229,23.2563662 12.3870493,23.2590235 12.3821421,23.2649074 L12.3780323,23.275831 L12.360941,23.7031097 L12.3658947,23.7234994 L12.3769048,23.7357139 L12.4804777,23.8096931 L12.4953491,23.8136134 L12.4953491,23.8136134 L12.5071152,23.8096931 L12.6106902,23.7357139 L12.6232938,23.7196733 L12.6232938,23.7196733 L12.6266527,23.7031097 L12.609561,23.275831 C12.6075724,23.2657013 12.6010112,23.2592993 12.5934901,23.257841 L12.5934901,23.257841 Z M12.8583906,23.1452862 L12.8445485,23.1473072 L12.6598443,23.2396597 L12.6498822,23.2499052 L12.6498822,23.2499052 L12.6471943,23.2611114 L12.6650943,23.6906389 L12.6699349,23.7034178 L12.6699349,23.7034178 L12.678386,23.7104931 L12.8793402,23.8032389 C12.8914285,23.8068999 12.9022333,23.8029875 12.9078286,23.7952264 L12.9118235,23.7811639 L12.8776777,23.1665331 C12.8752882,23.1545897 12.8674102,23.1470016 12.8583906,23.1452862 L12.8583906,23.1452862 Z M12.1430473,23.1473072 C12.1332178,23.1423925 12.1221763,23.1452606 12.1156365,23.1525954 L12.1099173,23.1665331 L12.0757714,23.7811639 C12.0751323,23.7926639 12.0828099,23.8018602 12.0926481,23.8045676 L12.108256,23.8032389 L12.3092106,23.7104931 L12.3186497,23.7024347 L12.3186497,23.7024347 L12.3225043,23.6906389 L12.340401,23.2611114 L12.337245,23.2485176 L12.337245,23.2485176 L12.3277531,23.2396597 L12.1430473,23.1473072 Z"
+                                    id="MingCute"
+                                    fill-rule="nonzero"
+                                  ></path>
+                                  <path
+                                    d="M19.7773,4.42984 C20.8652,3.97177 22.0315,4.8917 21.8394,6.05639 L19.5705,19.8131 C19.3517,21.1395 17.8949,21.9006 16.678,21.2396 C15.6597,20.6865 14.1489,19.8352 12.7873,18.9455 C12.1074,18.5012 10.0255,17.0766 10.2814,16.0625 C10.5002,15.1954 14.0001,11.9375 16.0001,10 C16.7857,9.23893 16.4279,8.79926 15.5001,9.5 C13.1985,11.2383 9.50332,13.8812 8.28136,14.625 C7.20323,15.2812 6.64031,15.3932 5.96886,15.2812 C4.74273,15.0769 3.60596,14.7605 2.67788,14.3758 C1.42351,13.8558 1.48461,12.132 2.67703,11.63 L19.7773,4.42984 Z"
+                                    fill="currentColor"
+                                    fill-opacity="0.9"
+                                  ></path>
+                                </g>
+                              </g>
+                            </g>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="d-flex flex-column justify-content-between service-contact-card-footer footer-grid-item-2"
+              >
+                <h3
+                  class="footer-email-title-text fw-bold font-Syne text-white"
+                >
+                  Looking for a full-stack
+                  <br />
+                  developer?
+                </h3>
+                <div class="d-flex justify-content-between align-items-center">
+                  <p
+                    class="footer-email-text fw-bold font-Syne leading-none text-warning"
+                  >
+                    hello@egorbobrov.com
+                  </p>
+                  <a href="../contact.html" class="text-white animate-arrow-up">
+                    <svg
+                      width="40"
+                      height="40"
+                      viewBox="0 0 40 40"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.6667 28.3334L28.3334 11.6667"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M11.6667 11.6667H28.3334V28.3334"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6 copyright">
+              <div
+                class="row gy-2 gx-sm-4 justify-content-center justify-content-sm-between align-items-center"
+              >
+                <div class="col-auto order-1">
+                  <p
+                    class="text-white text-lg fw-normal font-sans leading-7 mb-0"
+                  >
+                    ©2025 All Rights Reserved
+                  </p>
+                </div>
+                <div class="col-auto order-2">
+                  <div class="d-flex">
+                    <a
+                      id="scrollUp"
+                      class="d-flex flex-wrap align-items-center gap-2"
+                      href="#"
+                      aria-label="scroll up"
+                    >
+                      <span
+                        class="text-white text-lg fw-normal font-sans leading-7 transition-all"
+                      >
+                        Back to Top</span
+                      >
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12 19V5"
+                          stroke="#FFB646"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M19 12L12 5L5 12"
+                          stroke="#FFB646"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- Footer End -->
+    </div>
+
+    <!-- JS Vendor, Plugins & Activation Script Files -->
+
+    <!-- Vendors JS -->
+    <script src="../assets/js/vendor/modernizr-3.11.7.min.js"></script>
+    <script src="../assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="../assets/js/vendor/jquery-migrate-3.3.2.min.js"></script>
+    <script src="../assets/js/vendor/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugins JS -->
+    <script src="../assets/js/plugins/aos.js"></script>
+
+    <!-- Activation JS -->
+    <script src="../assets/js/main.js"></script>
+  </body>
+</html>
