@@ -419,9 +419,9 @@
             </a>
             <div class="col-12 col-lg-6 mb-4">
               <h4 class="text-dark fw-bold font-Syne leading-snug banner-title">
-                Duchess -
+                Krijji - Currency
                 <br />
-                Gym Website
+                Converter
               </h4>
             </div>
             <div class="col-12 col-lg-6">
@@ -435,12 +435,11 @@
                   >
                   <h4 class="text-15 leading-none">
                     <a
-                      href="https://duchess-fit.ru/"
+                      href="https://krijji.org/"
                       target="_blank"
                       class="hover-primary"
-                      >https://duchess-fit.ru/</a
+                      >https://krijji.org/</a
                     >
-                  </h4>
                 </li>
                 <li
                   class="d-flex flex-wrap flex-column gap-2 clients-info-item mb-4"
@@ -451,10 +450,10 @@
                   >
                   <h4 class="text-15 leading-none">
                     <a
-                      href="https://github.com/iamyegor/Duchess"
+                      href="https://github.com/iamyegor/Krijji"
                       target="_blank"
                       class="hover-primary"
-                      >https://github.com/iamyegor/Duchess</a
+                      >https://github.com/iamyegor/Krijji</a
                     >
                   </h4>
                 </li>
@@ -465,7 +464,7 @@
             <div class="col-12">
               <img
                 class="w-full rounded-20 project-details-image"
-                src="../assets/images/portfolios/duchess/preview.webp"
+                src="../assets/images/portfolios/krijji/preview.webp"
                 alt="banner"
               />
             </div>
@@ -478,74 +477,142 @@
       <section class="bg-white pb-120 project-details-section">
         <div class="max-w-1075 mx-auto banner-contents">
           <div class="grid grid-cols-1">
-            <h3 class="text-32 fw-bold font-Syne leading-10 mb-4">Overview</h3>
+            <h3 class="text-32 fw-bold font-Syne leading-10 mb-4">
+              Project Overview
+            </h3>
             <p class="paragraph mb-6">
-              This project focuses on building a modern, responsive frontend for
-              a fictional gym chain, demonstrating UI/UX implementation skills
-              using <u>React</u>. A key feature is the integration of an
-              interactive <u>Yandex Map</u> displaying club locations with
-              attention to user experience details. It serves as a practical
-              example of component-based UI development and third-party API
-              integration.
+              This project showcases the engineering of a
+              <u
+                >high-performance currency and cryptocurrency conversion
+                platform</u
+              >. It provides users with up-to-date rates, which are maintained
+              through automated background data fetching scheduled via
+              Quartz.NET. For enhanced SEO, the application utilizes Next.js for
+              Server-Side Rendering (SSR). Deployment relies on modern DevOps
+              practices, including delivery to a Kubernetes cluster managed via
+              Helm.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
               Key Technologies
             </h4>
             <ul class="fw-normal mb-6 list-unstyled paragraph">
+              <li><strong>Backend:</strong> ASP.NET Core, C#, Quartz.NET</li>
+              <li><strong>Frontend:</strong> React, Next.js, Tailwind CSS</li>
               <li>
-                <strong>Frontend:</strong> React, React Router, Tailwind CSS
+                <strong>Database:</strong> PostgreSQL, Entity Framework Core
+                (with Migrations)
               </li>
-              <li><strong>API:</strong> Yandex Maps API</li>
               <li>
-                <strong>Deployment Environment:</strong> Kubernetes (K8s) on a
-                VM
+                <strong>Architecture:</strong> Clean Architecture, Domain-Driven
+                Design (DDD) Principles
+              </li>
+              <li>
+                <strong>DevOps:</strong> Docker, Kubernetes (K8s), Helm, GitHub
+                Actions (CI/CD)
+              </li>
+              <li>
+                <strong>External APIs:</strong> FlateRate (Fiat Currencies),
+                CoinGecko (Cryptocurrencies)
               </li>
             </ul>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
-              Frontend Implementation
+              Backend Architecture and Implementation
             </h4>
             <p class="paragraph mb-4">
-              The user interface was developed entirely with <u>React</u>,
-              utilizing a component-based architecture for modularity. A central
-              feature is the integration with the <u>Yandex Maps API</u> to
-              visually represent multiple gym locations. Specific attention was
-              given to the user experience of the map: custom logic ensures the
-              map view automatically centers optimally to display the cluster of
-              locations upon loading, rather than defaulting to a generic view.
+              Architecting the backend involved using ASP.NET Core structured
+              according to Clean Architecture principles, ensuring a robust
+              separation of concerns and promoting maintainability.
+            </p>
+            <p class="paragraph mb-4">
+              Within this architecture, Domain-Driven Design (DDD) principles
+              were applied; concepts like Entities and
+              <u>Value Objects</u> (e.g., for Currency, CurrencyName) help
+              accurately model the core domain.
+            </p>
+            <p class="paragraph mb-4">
+              A critical backend function is the
+              <u>scheduled acquisition of external data</u>. This process is
+              managed by Quartz.NET, which triggers <u>background jobs</u> to
+              fetch fiat currency rates from FlateRate every 12 hours and
+              cryptocurrency rates from CoinGecko every minute, ensuring data
+              freshness without constantly polling external APIs.
             </p>
             <p class="paragraph mb-6">
-              The interface also includes standard sections expected of a gym
-              website, such as designed areas for presenting membership plans
-              and class schedules, illustrating the implementation of a typical
-              user-facing informational structure. The frontend components are
-              structured to potentially integrate with APIs.
+              For data persistence, the fetched USD-based rates are stored in a
+              PostgreSQL database using Entity Framework Core. Schema changes
+              are managed systematically via EF Core Migrations. The backend's
+              primary role, therefore, focuses on the reliable, scheduled
+              aggregation and storage of base currency data, serving it
+              efficiently to the frontend.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
-              Deployment
+              Frontend User Interface
             </h4>
+            <p class="paragraph mb-4">
+              Building the user interface involved using React and Next.js. The
+              strategic choice of Next.js enables
+              <u>Server-Side Rendering (SSR)</u>, significantly benefiting
+              Search Engine Optimization (<u>SEO</u>). For styling, Tailwind CSS
+              was employed, facilitating the rapid development of a clean and
+              responsive interface with its utility-first approach.
+            </p>
+            <p class="paragraph mb-4">
+              A key responsibility delegated to the frontend is performing the
+              <u
+                >calculation of cross-currency conversions on the client-side</u
+              >
+              based on the USD-relative rates provided by the backend API; this
+              design keeps the backend logic streamlined.
+            </p>
             <p class="paragraph mb-6">
-              The production build of the React application was deployed to a
-              <u>Kubernetes cluster</u> hosted on a virtual machine. This
-              demonstrates familiarity with deploying frontend applications
-              within a container orchestration environment.
+              The user experience focuses on clarity and ease of use. Features
+              include real-time display of the latest rates, an intuitive
+              mechanism for selecting currencies and inputting amounts,
+              <u>full internationalization</u> supporting six languages, and
+              <u>dynamic theme switching</u> between light and dark modes. To
+              manage component and application state, standard React patterns
+              are utilized.
+            </p>
+
+            <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
+              Deployment Automation and Infrastructure
+            </h4>
+            <p class="paragraph mb-4">
+              A comprehensive <u>DevOps workflow</u> ensures automated and
+              reliable deployments. To guarantee environmental consistency, both
+              the backend service and the frontend application are packaged into
+              Docker containers.
+            </p>
+            <p class="paragraph mb-4">
+              Deployment targets a Kubernetes (K8s) cluster for these
+              containerized applications. <u>Helm charts</u> streamline the
+              management of Kubernetes resources and the deployment process
+              itself, enhancing predictability and simplifying updates.
+            </p>
+            <p class="paragraph mb-6">
+              Automation for the entire cycle is handled via a GitHub Actions
+              CI/CD pipeline. Code commits automatically trigger builds, Docker
+              image creation and registry pushes, followed by the deployment of
+              new application versions to the Kubernetes cluster using Helm.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
               Conclusion
             </h4>
             <p class="paragraph mb-12">
-              This Gym Website project serves as a clear demonstration of
-              frontend development capabilities using React. It highlights
-              skills in building responsive user interfaces, integrating
-              third-party services like mapping APIs with
-              <u>attention to UX details</u> (map centering), and basic
-              familiarity with deploying applications within a
-              <u>Kubernetes environment</u>. It effectively showcases the
-              ability to translate design concepts into functional UI
-              components.
+              This Currency Conversion Platform demonstrates practical expertise
+              in building performant, <u>full-stack web applications</u>. It
+              effectively utilizes <u>background job scheduling</u> (Quartz.NET)
+              for reliable data acquisition, leverages Next.js for SEO benefits
+              via SSR, and implements efficient client-side logic for
+              calculations. The architecture (Clean Architecture, DDD
+              principles) and robust DevOps pipeline (Docker, Kubernetes, Helm,
+              CI/CD pipeline) showcase the ability to engineer and deploy
+              <u>scalable, production-ready solutions</u> with a focus on
+              maintainability and automation.
             </p>
           </div>
         </div>
@@ -573,7 +640,7 @@
             <div class="col-12 col-md-6 mb-6" data-aos="flip-down">
               <div class="rounded-20 overflow-hidden mb-6">
                 <img
-                  src="../assets/images/portfolios/krijji/preview.webp"
+                  src="../assets/images/portfolios/netiq/preview.webp"
                   class="related-project-image"
                   alt="Project preview"
                 />
@@ -588,6 +655,11 @@
                   <a
                     class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
                     href="../projects.html"
+                    >AI</a
+                  >
+                  <a
+                    class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
+                    href="../projects.html"
                     >DEVELOPMENT</a
                   >
                 </div>
@@ -597,13 +669,13 @@
                   <h4
                     class="fw-bold font-Syne text-center leading-10 portfolio-link"
                   >
-                    <a class="transition-all" href="krijji.html"
-                      >Krijji - Currency Converter</a
+                    <a class="transition-all" href="netiq.html"
+                      >NetIQ - AI-powered Chatbot</a
                     >
                   </h4>
                   <a
                     class="animate-arrow-up project-link-arrow"
-                    href="krijji.html"
+                    href="netiq.html"
                   >
                     <svg
                       width="40"
@@ -639,7 +711,7 @@
             >
               <div class="rounded-20 overflow-hidden mb-6">
                 <img
-                  src="../assets/images/portfolios/toppoizon/preview.webp"
+                  src="../assets/images/portfolios/reform-hub/preview.webp"
                   alt="Project preview"
                   class="related-project-image"
                 />
@@ -652,6 +724,11 @@
                     >WEB</a
                   >
                   <a
+                  class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
+                  href="../projects.html"
+                  >AI</a
+                >
+                  <a
                     class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
                     href="../projects.html"
                     >DEVELOPMENT</a
@@ -663,13 +740,13 @@
                   <h4
                     class="fw-bold font-Syne text-center leading-10 portfolio-link"
                   >
-                    <a class="transition-all" href="toppoizon.html"
-                      >Toppoizon - Landing Page</a
+                    <a class="transition-all" href="reform-hub.html"
+                      >Reform Proposal Hub</a
                     >
                   </h4>
                   <a
                     class="animate-arrow-up project-link-arrow"
-                    href="toppoizon.html"
+                    href="reform-hub.html"
                   >
                     <svg
                       width="40"
