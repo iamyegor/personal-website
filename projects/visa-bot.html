@@ -433,9 +433,24 @@
                     class="clients-info-text text-sm fw-normal font-Inter leading-tight"
                     >Link</span
                   >
-                  <h4 class="text-15 leading-none">(Not for public use yet)</h4>
+                  <h4 class="text-15 leading-none">(Not for public use)</h4>
                 </li>
-                
+                <li
+                  class="d-flex flex-wrap flex-column gap-2 clients-info-item mb-4"
+                >
+                  <span
+                    class="clients-info-text text-sm fw-normal font-Inter leading-tight"
+                    >Unflare repository</span
+                  >
+                  <h4 class="text-15 leading-none">
+                    <a
+                      href="https://github.com/iamyegor/Unflare"
+                      target="_blank"
+                      class="hover-primary"
+                      >https://github.com/iamyegor/Unflare</a
+                    >
+                  </h4>
+                </li>
               </ul>
             </div>
           </div>
@@ -443,7 +458,7 @@
             <div class="col-12">
               <img
                 class="w-full rounded-20 project-details-image"
-                src="../assets/images/portfolios/reform-hub/preview.webp"
+                src="../assets/images/portfolios/visa-bot/preview.webp"
                 alt="banner"
               />
             </div>
@@ -456,20 +471,17 @@
       <section class="bg-white pb-120 project-details-section">
         <div class="max-w-1075 mx-auto banner-contents">
           <div class="grid grid-cols-1">
-            <h3 class="text-32 fw-bold font-Syne leading-10 mb-4">
-              Project Overview
-            </h3>
+            <h3 class="text-32 fw-bold font-Syne leading-10 mb-4">Overview</h3>
             <p class="paragraph mb-6">
-              This project demonstrates the engineering of a specialized web
-              application designed to
-              <u>automate the extraction and structuring of data</u> from PDF
-              documents concerning German reforms. It processes documents
-              written in either German or English, consistently delivering
-              structured insights in English. The platform integrates AI for
-              sophisticated text analysis, employs asynchronous processing for
-              performance, and utilizes modern DevOps practices for reliable
-              deployment, showcasing the ability to build robust, data-centric
-              solutions.
+              This project involved engineering
+              <u
+                >a sophisticated automation bot designed to secure visa
+                appointments, a highly competitive and time-sensitive process</u
+              >. Developed for a visa agency, the bot navigates complex booking
+              workflows, overcomes significant anti-bot measures on both legacy
+              and new embassy platforms, and operates with high reliability
+              under strict time constraints, demonstrating advanced automation
+              and system integration capabilities.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
@@ -477,20 +489,32 @@
             </h4>
             <ul class="fw-normal mb-6 list-unstyled paragraph">
               <li>
-                <strong>Backend:</strong> ASP.NET Core, C#, Quartz.NET, SignalR,
+                <strong>Backend:</strong> ASP.NET Core, C#, Quartz.NET,
                 FluentValidation
               </li>
               <li>
-                <strong>Frontend:</strong> React, TypeScript, React Query, React
-                Router
+                <strong>Frontend:</strong> React, React Router
+                <!-- Added -->
               </li>
               <li>
-                <strong>AI Integration:</strong> Google Gemini 2.0 Flash API
+                <strong>Browser Automation Service:</strong> Node.js, ExpressJS
+              </li>
+              <li>
+                <strong>Browser Automation Lib:</strong> Puppeteer (via
+                PuppeteerRealBrowser)
+              </li>
+              <li>
+                <strong>Cloudflare Bypass:</strong> Custom "Unflare" Solution
               </li>
               <li>
                 <strong>Database:</strong> PostgreSQL with Entity Framework Core
                 (EF Core)
               </li>
+              <li>
+                <strong>Mobile Integration:</strong> Android (Java), Custom SMS
+                Forwarding App
+              </li>
+              <li><strong>External APIs:</strong> Gmail API</li>
               <li>
                 <strong>Infrastructure & DevOps:</strong> Docker, Kubernetes
                 (K8s), GitHub Actions (CI/CD)
@@ -498,95 +522,121 @@
             </ul>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
-              Backend Architecture and Implementation
+              System Architecture and Implementation
             </h4>
             <p class="paragraph mb-4">
-              The backend leverages ASP.NET Core combined with
-              <u>Minimal APIs</u> to create efficient, lightweight endpoints
-              suitable for a focused application. A pragmatic
-              <u>Layered Architecture</u> was implemented to maintain clear
-              separation between presentation, application logic, and
-              infrastructure concerns, balancing structure with development
-              velocity for this specific use case.
+              The system employs a hybrid backend architecture. The core
+              orchestration, scheduling, student management, and admin panel
+              functionalities are built with ASP.NET Core, utilizing a pragmatic
+              Layered Architecture suitable for its request-heavy and
+              integration-focused nature. <u>Asynchronous scheduling</u> is
+              managed by Quartz.NET, triggering bot operations precisely at 10
+              AM every Monday and Wednesday.
             </p>
             <p class="paragraph mb-4">
-              A core challenge was handling the potentially time-consuming AI
-              analysis. This was addressed using <u>Quartz.NET</u> to manage
-              <u>asynchronous background jobs</u>. Upon PDF upload, tasks are
-              queued, decoupling heavy processing from the user request and
-              ensuring UI responsiveness. Quartz.NET provides reliability for
-              job execution.
+              For interacting with the newer, Cloudflare-protected embassy
+              website, a dedicated service was developed using ExpressJS. This
+              service leverages PuppeteerRealBrowser for robust browser
+              automation. The ASP.NET Core application communicates with this
+              ExpressJS service to delegate browser automation tasks.
+            </p>
+            <p class="paragraph mb-4">
+              <strong>Legacy Site Automation:</strong> For the older embassy
+              site, which doesn't have Cloudflare protection, the bot uses
+              direct HTTP requests via <u>Flurl</u> library. It performs crucial
+              pre-computation steps: validating unique residential proxies (IP
+              Royal), pre-authenticating users, solving CAPTCHAs in advance, and
+              fetching necessary security tokens before the booking window
+              opens. This preparation enables
+              <u>ultra-fast booking execution</u> the moment appointments become
+              available, often within a 5-second window.
             </p>
             <p class="paragraph mb-6">
-              To perform its core analytical task, the platform integrates with
-              <u>Google Gemini 2.0 Flash</u>. To accurately extract
-              approximately 20 distinct data fields from the document text, I
-              developed and utilize a strategy involving multiple,
-              parallel-executed, specialized prompts. I also implemented a retry
-              mechanism that handles potential AI response formatting issues,
-              enhancing reliability. Once the analysis is complete,
-              <u>SignalR</u> delivers real-time feedback directly to the user's
-              browser, eliminating the need for manual page refreshes.
-              Server-side validation using <u>FluentValidation </u>ensures that
-              invatiants are kept intact after the document submission.
+              <strong>New Site Automation & Cloudflare Bypass:</strong> The
+              newer site required a different approach due to Cloudflare
+              protection. Browser automation via Puppeteer was necessary.
+              Critically, a <u>custom Cloudflare bypass solution</u> that I
+              named "Unflare", was developed to reliably obtain the necessary
+              Clearance tokens, overcoming limitations and lack of publicly
+              available tools. The bot also handles the site's
+              <u>multi-factor authentication</u>, integrating with the Gmail API
+              for email verification codes and a custom Android application for
+              SMS OTPs.
             </p>
 
+            <!-- New Frontend Section Start -->
+            <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
+              Admin Dashboard Frontend
+            </h4>
             <p class="paragraph mb-6">
-              Persistent data storage is handled by <u>PostgreSQL</u>, accessed
-              efficiently through <u>Entity Framework Core (EF Core)</u>.
+              An administrative interface was developed using <u>React</u> to
+              provide operational control and visibility. Utilizing
+              <u>React Router</u> for navigation, this dashboard allows the visa
+              agency staff to manage student data, configure additional bot
+              execution schedules (managed by Quartz.NET on the backend), and
+              monitor the overall status of the automation processes.
             </p>
+            <!-- New Frontend Section End -->
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
-              Frontend User Interface
+              Key Features & Innovations
             </h4>
             <p class="paragraph mb-4">
-              The UI is constructed using React and TypeScript, providing a
-              type-safe and component-based structure. A key element is the use
-              of <u>React Query</u> for <u>managing server state</u>. This
-              library significantly simplifies data fetching, caching, and
-              synchronization related to the backend processing status and
-              results. It handles loading/error states gracefully and
-              efficiently updates the UI when new data arrives via the SignalR
-              connection.
+              <strong>Custom Cloudflare Bypass ("Unflare"):</strong> Developed
+              Unflare to defeat Cloudflare's anti-bot measures, demonstrating
+              <u>deep understanding of web security techniques</u>.
+            </p>
+            <p class="paragraph mb-4">
+              <strong>Multi-Factor Authentication Automation:</strong>
+              Seamlessly handles both email (via Gmail API) and SMS OTP
+              verification. The SMS part involved rapidly developing a custom
+              Android SMS Forwarder application, using Java, which listens for
+              specific embassy messages and relays the OTP code to the backend,
+              associating it with the correct user via their email address
+              entered in the app.
+            </p>
+            <p class="paragraph mb-4">
+              <strong>High-Speed, Time-Critical Execution:</strong> Optimized
+              workflow for legacy site interaction, involving pre-computation
+              and rapid-fire requests to maximize booking success within
+              extremely short timeframes, usually less than 5 seconds.
             </p>
             <p class="paragraph mb-6">
-              The user experience is designed for simplicity: upload a PDF,
-              receive immediate feedback that processing has started, and see
-              structured results appear dynamically. React Router manages
-              navigation. Client-side validation provides quick feedback,
-              complementing the backend rules. The interface ensures user
-              context (the document being processed) is maintained even if the
-              page is reloaded.
+              <strong>Reliable Proxy Management:</strong> Implemented robust
+              selection and pre-validation checks for proxies to ensure
+              dependable operation during critical booking periods.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
               Deployment Automation and Infrastructure
             </h4>
             <p class="paragraph mb-6">
-              Modern DevOps practices ensure automated and consistent
-              deployments. A <u>CI/CD pipeline</u> configured in GitHub Actions
-              automates the entire workflow: building the backend and frontend,
-              packaging them into <u>Docker containers</u>, and deploying these
-              containers to a <u>Kubernetes (K8s) cluster</u>. This
-              containerization ensures environmental consistency, while K8s
-              manages application scaling, deployment rollouts, and resilience.
+              Standard modern DevOps practices were utilized. A
+              <u>CI/CD pipeline</u> in GitHub Actions automates building,
+              containerization, and deployment. ASP.NET Core application, the
+              ExpressJS automation service and the frontend are packaged as
+              <u>Docker containers</u>. These containers are deployed and
+              managed within a <u>Kubernetes (K8s) cluster</u>, ensuring
+              scalability and resilience for the bot's operations.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
               Conclusion
             </h4>
             <p class="paragraph mb-12">
-              This Reform Proposal Hub project demonstrates practical expertise
-              in building specialized, data-focused web applications. It
-              effectively <u>integrates AI for complex data extraction</u>,
-              utilizes <u>asynchronous patterns</u> (Quartz.NET) and
-              <u>real-time communication</u> (SignalR) for a responsive user
-              experience, and employs modern frontend state management
-              techniques (React Query). The implementation showcases strong
-              skills across the stack (ASP.NET Core, React, TypeScript,
-              PostgreSQL) and proficiency in contemporary DevOps workflows
-              (Docker, Kubernetes, CI/CD), representing the capability to
-              engineer and deploy robust, automated solutions.
+              This Embassy Appointment Bot project showcases the ability to
+              engineer complex automation solutions tackling significant
+              real-world challenges like high-frequency trading-like competition
+              and advanced anti-bot systems. It highlights expertise in hybrid
+              backend architectures (ASP.NET Core + Node.js), sophisticated
+              browser automation (Puppeteer), development of
+              <u>custom security bypass techniques</u> (Unflare solution),
+              cross-platform integration (Web backend + Android), responsive
+              user interface development (React), and reliable asynchronous task
+              scheduling (Quartz.NET). The successful implementation
+              demonstrates strong problem-solving skills and proficiency across
+              multiple technologies and modern <u>DevOps workflows</u> (Docker,
+              Kubernetes, CI/CD).
             </p>
           </div>
         </div>
@@ -614,7 +664,7 @@
             <div class="col-12 col-md-6 mb-6" data-aos="flip-down">
               <div class="rounded-20 overflow-hidden mb-6">
                 <img
-                  src="../assets/images/portfolios/netiq/preview.webp"
+                  src="../assets/images/portfolios/duchess/preview.webp"
                   class="related-project-image"
                   alt="Project preview"
                 />
@@ -629,11 +679,6 @@
                   <a
                     class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
                     href="../projects.html"
-                    >AI</a
-                  >
-                  <a
-                    class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                    href="../projects.html"
                     >DEVELOPMENT</a
                   >
                 </div>
@@ -643,13 +688,13 @@
                   <h4
                     class="fw-bold font-Syne text-center leading-10 portfolio-link"
                   >
-                    <a class="transition-all" href="netiq.html"
-                      >NetIQ - AI Chat</a
+                    <a class="transition-all" href="duchess.html"
+                      >Duchess - Gym Website</a
                     >
                   </h4>
                   <a
                     class="animate-arrow-up project-link-arrow"
-                    href="netiq.html"
+                    href="duchess.html"
                   >
                     <svg
                       width="40"
@@ -685,7 +730,7 @@
             >
               <div class="rounded-20 overflow-hidden mb-6">
                 <img
-                  src="../assets/images/portfolios/krijji/preview.webp"
+                  src="../assets/images/portfolios/attire/preview.webp"
                   alt="Project preview"
                   class="related-project-image"
                 />
@@ -709,13 +754,13 @@
                   <h4
                     class="fw-bold font-Syne text-center leading-10 portfolio-link"
                   >
-                    <a class="transition-all" href="krijji.html"
-                      >Krijji - Currency Converter</a
+                    <a class="transition-all" href="attire.html"
+                      >Attire - E-commerce Store</a
                     >
                   </h4>
                   <a
                     class="animate-arrow-up project-link-arrow"
-                    href="krijji.html"
+                    href="attire.html"
                   >
                     <svg
                       width="40"

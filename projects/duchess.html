@@ -419,9 +419,9 @@
             </a>
             <div class="col-12 col-lg-6 mb-4">
               <h4 class="text-dark fw-bold font-Syne leading-snug banner-title">
-                Reform Proposal
+                Duchess -
                 <br />
-                Hub
+                Gym Website
               </h4>
             </div>
             <div class="col-12 col-lg-6">
@@ -433,9 +433,31 @@
                     class="clients-info-text text-sm fw-normal font-Inter leading-tight"
                     >Link</span
                   >
-                  <h4 class="text-15 leading-none">(Not for public use yet)</h4>
+                  <h4 class="text-15 leading-none">
+                    <a
+                      href="https://duchess-fit.ru/"
+                      target="_blank"
+                      class="hover-primary"
+                      >https://duchess-fit.ru/</a
+                    >
+                  </h4>
                 </li>
-                
+                <li
+                  class="d-flex flex-wrap flex-column gap-2 clients-info-item mb-4"
+                >
+                  <span
+                    class="clients-info-text text-sm fw-normal font-Inter leading-tight"
+                    >Repository</span
+                  >
+                  <h4 class="text-15 leading-none">
+                    <a
+                      href="https://github.com/iamyegor/Duchess"
+                      target="_blank"
+                      class="hover-primary"
+                      >https://github.com/iamyegor/Duchess</a
+                    >
+                  </h4>
+                </li>
               </ul>
             </div>
           </div>
@@ -443,7 +465,7 @@
             <div class="col-12">
               <img
                 class="w-full rounded-20 project-details-image"
-                src="../assets/images/portfolios/reform-hub/preview.webp"
+                src="../assets/images/portfolios/duchess/preview.webp"
                 alt="banner"
               />
             </div>
@@ -456,20 +478,15 @@
       <section class="bg-white pb-120 project-details-section">
         <div class="max-w-1075 mx-auto banner-contents">
           <div class="grid grid-cols-1">
-            <h3 class="text-32 fw-bold font-Syne leading-10 mb-4">
-              Project Overview
-            </h3>
+            <h3 class="text-32 fw-bold font-Syne leading-10 mb-4">Overview</h3>
             <p class="paragraph mb-6">
-              This project demonstrates the engineering of a specialized web
-              application designed to
-              <u>automate the extraction and structuring of data</u> from PDF
-              documents concerning German reforms. It processes documents
-              written in either German or English, consistently delivering
-              structured insights in English. The platform integrates AI for
-              sophisticated text analysis, employs asynchronous processing for
-              performance, and utilizes modern DevOps practices for reliable
-              deployment, showcasing the ability to build robust, data-centric
-              solutions.
+              This project focuses on building a modern, responsive frontend for
+              a fictional gym chain, demonstrating UI/UX implementation skills
+              using <u>React</u>. A key feature is the integration of an
+              interactive <u>Yandex Map</u> displaying club locations with
+              attention to user experience details. It serves as a practical
+              example of component-based UI development and third-party API
+              integration.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
@@ -477,116 +494,58 @@
             </h4>
             <ul class="fw-normal mb-6 list-unstyled paragraph">
               <li>
-                <strong>Backend:</strong> ASP.NET Core, C#, Quartz.NET, SignalR,
-                FluentValidation
+                <strong>Frontend:</strong> React, React Router, Tailwind CSS
               </li>
+              <li><strong>API:</strong> Yandex Maps API</li>
               <li>
-                <strong>Frontend:</strong> React, TypeScript, React Query, React
-                Router
-              </li>
-              <li>
-                <strong>AI Integration:</strong> Google Gemini 2.0 Flash API
-              </li>
-              <li>
-                <strong>Database:</strong> PostgreSQL with Entity Framework Core
-                (EF Core)
-              </li>
-              <li>
-                <strong>Infrastructure & DevOps:</strong> Docker, Kubernetes
-                (K8s), GitHub Actions (CI/CD)
+                <strong>Deployment Environment:</strong> Kubernetes (K8s) on a
+                VM
               </li>
             </ul>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
-              Backend Architecture and Implementation
+              Frontend Implementation
             </h4>
             <p class="paragraph mb-4">
-              The backend leverages ASP.NET Core combined with
-              <u>Minimal APIs</u> to create efficient, lightweight endpoints
-              suitable for a focused application. A pragmatic
-              <u>Layered Architecture</u> was implemented to maintain clear
-              separation between presentation, application logic, and
-              infrastructure concerns, balancing structure with development
-              velocity for this specific use case.
-            </p>
-            <p class="paragraph mb-4">
-              A core challenge was handling the potentially time-consuming AI
-              analysis. This was addressed using <u>Quartz.NET</u> to manage
-              <u>asynchronous background jobs</u>. Upon PDF upload, tasks are
-              queued, decoupling heavy processing from the user request and
-              ensuring UI responsiveness. Quartz.NET provides reliability for
-              job execution.
+              The user interface was developed entirely with <u>React</u>,
+              utilizing a component-based architecture for modularity. A central
+              feature is the integration with the <u>Yandex Maps API</u> to
+              visually represent multiple gym locations. Specific attention was
+              given to the user experience of the map: custom logic ensures the
+              map view automatically centers optimally to display the cluster of
+              locations upon loading, rather than defaulting to a generic view.
             </p>
             <p class="paragraph mb-6">
-              To perform its core analytical task, the platform integrates with
-              <u>Google Gemini 2.0 Flash</u>. To accurately extract
-              approximately 20 distinct data fields from the document text, I
-              developed and utilize a strategy involving multiple,
-              parallel-executed, specialized prompts. I also implemented a retry
-              mechanism that handles potential AI response formatting issues,
-              enhancing reliability. Once the analysis is complete,
-              <u>SignalR</u> delivers real-time feedback directly to the user's
-              browser, eliminating the need for manual page refreshes.
-              Server-side validation using <u>FluentValidation </u>ensures that
-              invatiants are kept intact after the document submission.
-            </p>
-
-            <p class="paragraph mb-6">
-              Persistent data storage is handled by <u>PostgreSQL</u>, accessed
-              efficiently through <u>Entity Framework Core (EF Core)</u>.
+              The interface also includes standard sections expected of a gym
+              website, such as designed areas for presenting membership plans
+              and class schedules, illustrating the implementation of a typical
+              user-facing informational structure. The frontend components are
+              structured to potentially integrate with APIs.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
-              Frontend User Interface
-            </h4>
-            <p class="paragraph mb-4">
-              The UI is constructed using React and TypeScript, providing a
-              type-safe and component-based structure. A key element is the use
-              of <u>React Query</u> for <u>managing server state</u>. This
-              library significantly simplifies data fetching, caching, and
-              synchronization related to the backend processing status and
-              results. It handles loading/error states gracefully and
-              efficiently updates the UI when new data arrives via the SignalR
-              connection.
-            </p>
-            <p class="paragraph mb-6">
-              The user experience is designed for simplicity: upload a PDF,
-              receive immediate feedback that processing has started, and see
-              structured results appear dynamically. React Router manages
-              navigation. Client-side validation provides quick feedback,
-              complementing the backend rules. The interface ensures user
-              context (the document being processed) is maintained even if the
-              page is reloaded.
-            </p>
-
-            <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
-              Deployment Automation and Infrastructure
+              Deployment
             </h4>
             <p class="paragraph mb-6">
-              Modern DevOps practices ensure automated and consistent
-              deployments. A <u>CI/CD pipeline</u> configured in GitHub Actions
-              automates the entire workflow: building the backend and frontend,
-              packaging them into <u>Docker containers</u>, and deploying these
-              containers to a <u>Kubernetes (K8s) cluster</u>. This
-              containerization ensures environmental consistency, while K8s
-              manages application scaling, deployment rollouts, and resilience.
+              The production build of the React application was deployed to a
+              <u>Kubernetes cluster</u> hosted on a virtual machine. This
+              demonstrates familiarity with deploying frontend applications
+              within a container orchestration environment.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
               Conclusion
             </h4>
             <p class="paragraph mb-12">
-              This Reform Proposal Hub project demonstrates practical expertise
-              in building specialized, data-focused web applications. It
-              effectively <u>integrates AI for complex data extraction</u>,
-              utilizes <u>asynchronous patterns</u> (Quartz.NET) and
-              <u>real-time communication</u> (SignalR) for a responsive user
-              experience, and employs modern frontend state management
-              techniques (React Query). The implementation showcases strong
-              skills across the stack (ASP.NET Core, React, TypeScript,
-              PostgreSQL) and proficiency in contemporary DevOps workflows
-              (Docker, Kubernetes, CI/CD), representing the capability to
-              engineer and deploy robust, automated solutions.
+              This Gym Website project serves as a clear demonstration of
+              frontend development capabilities using React. It highlights
+              skills in building responsive user interfaces, integrating
+              third-party services like mapping APIs with
+              <u>attention to UX details</u> (map centering), and basic
+              familiarity with deploying applications within a
+              <u>Kubernetes environment</u>. It effectively showcases the
+              ability to translate design concepts into functional UI
+              components.
             </p>
           </div>
         </div>
@@ -614,7 +573,7 @@
             <div class="col-12 col-md-6 mb-6" data-aos="flip-down">
               <div class="rounded-20 overflow-hidden mb-6">
                 <img
-                  src="../assets/images/portfolios/netiq/preview.webp"
+                  src="../assets/images/portfolios/duchess/preview.webp"
                   class="related-project-image"
                   alt="Project preview"
                 />
@@ -629,11 +588,6 @@
                   <a
                     class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
                     href="../projects.html"
-                    >AI</a
-                  >
-                  <a
-                    class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                    href="../projects.html"
                     >DEVELOPMENT</a
                   >
                 </div>
@@ -643,13 +597,13 @@
                   <h4
                     class="fw-bold font-Syne text-center leading-10 portfolio-link"
                   >
-                    <a class="transition-all" href="netiq.html"
-                      >NetIQ - AI Chat</a
+                    <a class="transition-all" href="duchess.html"
+                      >Duchess - Gym Website</a
                     >
                   </h4>
                   <a
                     class="animate-arrow-up project-link-arrow"
-                    href="netiq.html"
+                    href="duchess.html"
                   >
                     <svg
                       width="40"
@@ -685,7 +639,7 @@
             >
               <div class="rounded-20 overflow-hidden mb-6">
                 <img
-                  src="../assets/images/portfolios/krijji/preview.webp"
+                  src="../assets/images/portfolios/attire/preview.webp"
                   alt="Project preview"
                   class="related-project-image"
                 />
@@ -709,13 +663,13 @@
                   <h4
                     class="fw-bold font-Syne text-center leading-10 portfolio-link"
                   >
-                    <a class="transition-all" href="krijji.html"
-                      >Krijji - Currency Converter</a
+                    <a class="transition-all" href="attire.html"
+                      >Attire - E-commerce Store</a
                     >
                   </h4>
                   <a
                     class="animate-arrow-up project-link-arrow"
-                    href="krijji.html"
+                    href="attire.html"
                   >
                     <svg
                       width="40"

@@ -11,7 +11,7 @@ const projectsData = [
   },
   {
     name: "Visa Appointments Booking Bot",
-    previewImage: "nepal-to-korea/preview.webp",
+    previewImage: "visa-bot/preview.webp",
     link: "projects/visa-bot.html",
   },
   {
