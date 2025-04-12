@@ -1319,6 +1319,7 @@ a {
 }
 
 .hero-btn-wraper {
+  row-gap: 10px;
   margin-bottom: 50px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px),
@@ -1413,36 +1414,52 @@ a {
 }
 
 .service-contact-card {
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 36px;
   padding-bottom: 36px;
-  max-width: 416px;
+  width: 100%;
   height: 100%;
   position: relative;
   border-radius: 8px;
+}
+@media (min-width: 1000px) {
+  .service-contact-card {
+    max-width: 416px;
+  }
 }
 .service-contact-card:hover .animate-arrow-up {
   -webkit-animation: moveUp 0.8s linear;
   animation: moveUp 0.8s linear;
 }
 
-@media only screen and (min-width: 1280px) and (max-width: 1440px),
-  only screen and (min-width: 1441px) {
+.say-hello-email {
+  font-size: 20px;
+}
+
+@media (min-width: 390px) {
   .say-hello-email {
     font-size: 26px;
   }
 }
 
-.about-grid-space-right {
-  padding-left: 60px;
-}
 @media only screen and (min-width: 1280px) and (max-width: 1440px),
   only screen and (min-width: 1441px) {
+  .service-contact-card {
+    margin-top: 0;
+  }
+}
+
+.about-grid-space-right {
+  padding-left: 10px;
+}
+
+@media (min-width: 990px) {
   .about-grid-space-right {
-    padding-left: 95px;
+    padding-left: 30px;
   }
 }
 
@@ -1660,12 +1677,12 @@ a {
 }
 @media only screen and (min-width: 1280px) and (max-width: 1440px) {
   .featured-properties-space-left {
-    padding-left: 100px;
+    padding-left: 50px;
   }
 }
 @media only screen and (min-width: 1441px) {
   .featured-properties-space-left {
-    padding-left: 134px;
+    padding-left: 70px;
   }
 }
 
@@ -1696,7 +1713,19 @@ a {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 770px) {
+  .tab-contents-experience {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (min-width: 990px) {
+  .tab-contents-experience {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1200px) {
   .tab-contents-experience {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2264,7 +2293,7 @@ a {
 }
 
 .clients-info-text {
-  width: 100% ;
+  width: 100%;
   color: rgba(8, 8, 8, 0.8);
 }
 
@@ -2424,7 +2453,7 @@ textarea.contact-form-control {
 
 @media (min-width: 650px) {
   .project-details-image {
-    height: 700px
+    height: 700px;
   }
 }
 
@@ -2453,3 +2482,22 @@ textarea.contact-form-control {
   }
 }
 
+/* .say-hello-card {
+  width: 100%;
+}
+
+@media (min-width: 1000px) {
+  .say-hello-card {
+    width: fit-content;
+  }
+} */
+
+.introduction-section {
+  margin-top: 30px;
+}
+
+@media (min-width: 990px) {
+  .introduction-section {
+    margin-top: 0;
+  }
+}
