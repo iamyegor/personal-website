@@ -419,9 +419,9 @@
             </a>
             <div class="col-12 col-lg-6 mb-4">
               <h4 class="text-dark fw-bold font-Syne leading-snug banner-title">
-                Krijji - Currency
+                Odit Group -
                 <br />
-                Converter
+                Intro Page
               </h4>
             </div>
             <div class="col-12 col-lg-6">
@@ -435,26 +435,10 @@
                   >
                   <h4 class="text-15 leading-none">
                     <a
-                      href="https://krijji.org/"
+                      href="https://oditgroup.com/"
                       target="_blank"
                       class="hover-primary"
-                      >https://krijji.org/</a
-                    >
-                  </h4>
-                </li>
-                <li
-                  class="d-flex flex-wrap flex-column gap-2 clients-info-item mb-4"
-                >
-                  <span
-                    class="clients-info-text text-sm fw-normal font-Inter leading-tight"
-                    >Repository</span
-                  >
-                  <h4 class="text-15 leading-none">
-                    <a
-                      href="https://github.com/iamyegor/Krijji"
-                      target="_blank"
-                      class="hover-primary"
-                      >https://github.com/iamyegor/Krijji</a
+                      >https://oditgroup.com/</a
                     >
                   </h4>
                 </li>
@@ -465,7 +449,7 @@
             <div class="col-12">
               <img
                 class="w-full rounded-20 project-details-image"
-                src="../assets/images/portfolios/krijji/preview.webp"
+                src="../assets/images/portfolios/oditgroup/preview.webp"
                 alt="banner"
               />
             </div>
@@ -482,138 +466,61 @@
               Project Overview
             </h3>
             <p class="paragraph mb-6">
-              This project showcases the engineering of a
-              <u
-                >high-performance currency and cryptocurrency conversion
-                platform</u
-              >. It provides users with up-to-date rates, which are maintained
-              through automated background data fetching scheduled via
-              Quartz.NET. For enhanced SEO, the application utilizes Next.js for
-              Server-Side Rendering (SSR). Deployment relies on modern DevOps
-              practices, including delivery to a Kubernetes cluster managed via
-              Helm.
+              This project involved the development of a clean and responsive
+              <u>placeholder landing page</u>, designed to serve as a temporary
+              presence while a full website is under construction. Built with
+              React and Next.js, it features a prominent background video,
+              company branding, essential text, and a seamless theme switching
+              capability. The project utilized Next.js's static export feature
+              to generate optimized HTML/CSS/JS assets for simple static
+              hosting.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
               Key Technologies
             </h4>
             <ul class="fw-normal mb-6 list-unstyled paragraph">
-              <li><strong>Backend:</strong> ASP.NET Core, C#, Quartz.NET</li>
-              <li><strong>Frontend:</strong> React, Next.js, Tailwind CSS</li>
-              <li>
-                <strong>Database:</strong> PostgreSQL, Entity Framework Core
-                (with Migrations)
-              </li>
-              <li>
-                <strong>Architecture:</strong> Clean Architecture, Domain-Driven
-                Design (DDD) Principles
-              </li>
-              <li>
-                <strong>DevOps:</strong> Docker, Kubernetes (K8s), Helm, GitHub
-                Actions (CI/CD)
-              </li>
-              <li>
-                <strong>External APIs:</strong> FlateRate (Fiat Currencies),
-                CoinGecko (Cryptocurrencies)
-              </li>
+              <li><strong>Frontend:</strong> React, Next.js</li>
+              <li><strong>Styling:</strong> Tailwind CSS</li>
             </ul>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
-              Backend Architecture and Implementation
+              Implementation Details
             </h4>
             <p class="paragraph mb-4">
-              Architecting the backend involved using ASP.NET Core structured
-              according to Clean Architecture principles, ensuring a robust
-              separation of concerns and promoting maintainability.
+              The core of the project is a single-page application presenting a
+              straightforward layout: a company logo, a continuously playing
+              background video, and a brief descriptive text section. Styling
+              was implemented using Tailwind CSS for rapid development of the
+              responsive layout.
             </p>
             <p class="paragraph mb-4">
-              Within this architecture, Domain-Driven Design (DDD) principles
-              were applied; concepts like Entities and
-              <u>Value Objects</u> (e.g., for Currency, CurrencyName) help
-              accurately model the core domain.
-            </p>
-            <p class="paragraph mb-4">
-              A critical backend function is the
-              <u>scheduled acquisition of external data</u>. This process is
-              managed by Quartz.NET, which triggers <u>background jobs</u> to
-              fetch fiat currency rates from FlateRate every 12 hours and
-              cryptocurrency rates from CoinGecko every minute, ensuring data
-              freshness without constantly polling external APIs.
-            </p>
-            <p class="paragraph mb-6">
-              For data persistence, the fetched USD-based rates are stored in a
-              PostgreSQL database using Entity Framework Core. Schema changes
-              are managed systematically via EF Core Migrations. The backend's
-              primary role, therefore, focuses on the reliable, scheduled
-              aggregation and storage of base currency data, serving it
-              efficiently to the frontend.
-            </p>
-
-            <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
-              Frontend User Interface
-            </h4>
-            <p class="paragraph mb-4">
-              Building the user interface involved using React and Next.js. The
-              strategic choice of Next.js enables
-              <u>Server-Side Rendering (SSR)</u>, significantly benefiting
-              Search Engine Optimization (<u>SEO</u>). For styling, Tailwind CSS
-              was employed, facilitating the rapid development of a clean and
-              responsive interface with its utility-first approach.
-            </p>
-            <p class="paragraph mb-4">
-              A key responsibility delegated to the frontend is performing the
+              A key technical feature is the implementation of a light/dark
+              theme switcher. Particular attention was paid to ensure that
+              toggling the theme applies the necessary style changes across the
+              page
               <u
-                >calculation of cross-currency conversions on the client-side</u
-              >
-              based on the USD-relative rates provided by the backend API; this
-              design keeps the backend logic streamlined.
+                >without interrupting or restarting the background video
+                playback</u
+              >, providing a smooth user experience.
             </p>
             <p class="paragraph mb-6">
-              The user experience focuses on clarity and ease of use. Features
-              include real-time display of the latest rates, an intuitive
-              mechanism for selecting currencies and inputting amounts,
-              <u>full internationalization</u> supporting six languages, and
-              <u>dynamic theme switching</u> between light and dark modes. To
-              manage component and application state, standard React patterns
-              are utilized.
-            </p>
-
-            <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
-              Deployment Automation and Infrastructure
-            </h4>
-            <p class="paragraph mb-4">
-              A comprehensive <u>DevOps workflow</u> ensures automated and
-              reliable deployments. To guarantee environmental consistency, both
-              the backend service and the frontend application are packaged into
-              Docker containers.
-            </p>
-            <p class="paragraph mb-4">
-              Deployment targets a Kubernetes (K8s) cluster for these
-              containerized applications. <u>Helm charts</u> streamline the
-              management of Kubernetes resources and the deployment process
-              itself, enhancing predictability and simplifying updates.
-            </p>
-            <p class="paragraph mb-6">
-              Automation for the entire cycle is handled via a GitHub Actions
-              CI/CD pipeline. Code commits automatically trigger builds, Docker
-              image creation and registry pushes, followed by the deployment of
-              new application versions to the Kubernetes cluster using Helm.
+              The application was built using Next.js. Specifically, its static
+              export capability (next export) was leveraged to generate highly
+              <u>optimized, static HTML, CSS, and JavaScript files</u>. This
+              output is ideal for deployment on any standard static hosting
+              platform, ensuring fast load times and minimal infrastructure
+              requirements.
             </p>
 
             <h4 class="text-2xl fw-bold font-Syne leading-9 mb-3 mt-6">
               Conclusion
             </h4>
             <p class="paragraph mb-12">
-              This Currency Conversion Platform demonstrates practical expertise
-              in building performant, <u>full-stack web applications</u>. It
-              effectively utilizes <u>background job scheduling</u> (Quartz.NET)
-              for reliable data acquisition, leverages Next.js for SEO benefits
-              via SSR, and implements efficient client-side logic for
-              calculations. The architecture (Clean Architecture, DDD
-              principles) and robust DevOps pipeline (Docker, Kubernetes, Helm,
-              CI/CD pipeline) showcase the ability to engineer and deploy
-              <u>scalable, production-ready solutions</u> with a focus on
-              maintainability and automation.
+              Although relatively simple in scope, this project demonstrates
+              proficiency in foundational React and Next.js development,
+              including the practical application of its static site generation
+              features.
             </p>
           </div>
         </div>
@@ -641,7 +548,7 @@
             <div class="col-12 col-md-6 mb-6" data-aos="flip-down">
               <div class="rounded-20 overflow-hidden mb-6">
                 <img
-                  src="../assets/images/portfolios/netiq/preview.webp"
+                  src="../assets/images/portfolios/toppoizon/preview.webp"
                   class="related-project-image"
                   alt="Project preview"
                 />
@@ -653,11 +560,7 @@
                     href="../projects.html"
                     >WEB</a
                   >
-                  <a
-                    class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                    href="../projects.html"
-                    >AI</a
-                  >
+                  
                   <a
                     class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
                     href="../projects.html"
@@ -670,13 +573,13 @@
                   <h4
                     class="fw-bold font-Syne text-center leading-10 portfolio-link"
                   >
-                    <a class="transition-all" href="netiq.html"
-                      >NetIQ - AI-powered Chatbot</a
+                    <a class="transition-all" href="toppoizon.html"
+                      >TopPoizon - Landing Page</a
                     >
                   </h4>
                   <a
                     class="animate-arrow-up project-link-arrow"
-                    href="netiq.html"
+                    href="toppoizon.html"
                   >
                     <svg
                       width="40"
@@ -712,7 +615,7 @@
             >
               <div class="rounded-20 overflow-hidden mb-6">
                 <img
-                  src="../assets/images/portfolios/reform-hub/preview.webp"
+                  src="../assets/images/portfolios/duchess/preview.webp"
                   alt="Project preview"
                   class="related-project-image"
                 />
@@ -727,11 +630,6 @@
                   <a
                     class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
                     href="../projects.html"
-                    >AI</a
-                  >
-                  <a
-                    class="text-xs fw-medium font-Inter leading-none px-4 rounded-40 portfolio-tag-link"
-                    href="../projects.html"
                     >DEVELOPMENT</a
                   >
                 </div>
@@ -741,13 +639,13 @@
                   <h4
                     class="fw-bold font-Syne text-center leading-10 portfolio-link"
                   >
-                    <a class="transition-all" href="reform-hub.html"
-                      >Reform Proposal Hub</a
+                    <a class="transition-all" href="duchess.html"
+                      >Duchess - Gym Website</a
                     >
                   </h4>
                   <a
                     class="animate-arrow-up project-link-arrow"
-                    href="reform-hub.html"
+                    href="duchess.html"
                   >
                     <svg
                       width="40"
