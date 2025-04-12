@@ -33,7 +33,7 @@ if ($isSmtp) {
     //Username to use for SMTP authentication
     $mail->Username = 'contacted@egorbobrov.com';
     //Password to use for SMTP authentication
-    $mail->Password = 'baUfMQDE6hQ0';
+    $mail->Password = getenv('MAIL_PASSWORD');
     //Set the SMTP port number - likely to be 25, 465 or 587
     $mail->Port = 587;
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
