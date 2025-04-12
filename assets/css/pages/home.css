@@ -2338,6 +2338,8 @@ a {
   gap: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid #d1d5db;
+  fill: rgb(8, 8, 8);
+  color: rgb(8, 8, 8);
 }
 @media (min-width: 992px) {
   .address-item {
@@ -2500,4 +2502,31 @@ textarea.contact-form-control {
   .introduction-section {
     margin-top: 0;
   }
+}
+
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  vertical-align: -0.125em;
+  border: 0.2em solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spinner-border 0.75s linear infinite;
+  margin-right: 0.5rem;
+}
+
+@keyframes spinner-border {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#submit-button:disabled {
+  cursor: wait;
+}
+
+.btn-sending {
+  pointer-events: none !important;
+  opacity: 0.8 !important;
 }

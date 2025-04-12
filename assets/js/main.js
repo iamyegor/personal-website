@@ -133,32 +133,51 @@
   
   */
   const contactForm = $("#contact-form"),
-    formMessages = $(".form-message")
+    formMessages = $(".form-message"),
+    submitButton = $("#submit-button"),
+    formFields = contactForm.find("input, textarea")
+
+  const originalButtonHtml = submitButton.html()
+  const loadingButtonHtml = `
+    <span class="spinner" role="status" aria-hidden="true"></span>
+    Sending...
+`
+
   contactForm.validate({
-    submitHandler: function (form) {
+    submitHandler: async function (form, event) {
+      event.preventDefault()
+
+      submitButton.prop("disabled", true)
+      submitButton.html(loadingButtonHtml)
+      submitButton.addClass("btn-sending")
+      formMessages.text("")
+
+      const formData = contactForm.serialize()
+      formFields.prop("disabled", true)
+
       $.ajax({
         type: "POST",
-        url: form.action,
-        data: $(form).serialize(),
+        url: "mail.php",
+        data: formData,
+        complete: function () {
+          submitButton.prop("disabled", false)
+          submitButton.html(originalButtonHtml)
+          submitButton.removeClass("btn-sending")
+          formFields.prop("disabled", false)
+        },
       })
         .done(function (response) {
-          console.log(response)
           formMessages
             .removeClass("error text-danger")
             .addClass("success text-success mt-3")
             .text(response)
-          // Clear the form.
           form.reset()
+          formFields.prop("disabled", false)
         })
         .fail(function (data) {
-          // Make sure that the formMessages div has the 'error' class.
           formMessages
             .removeClass("success text-success")
             .addClass("error text-danger mt-3")
-          // Set the message text.
-
-          console.log(data.responseText)
-
           if (data.responseText !== "") {
             formMessages.text(data.responseText)
           } else {
@@ -166,8 +185,12 @@
               "Oops! An error occured and your message could not be sent."
             )
           }
+          // Поля разблокируются в 'complete'
         })
     },
+    // Можно добавить правила валидации сюда, если нужно
+    // rules: { ... },
+    // messages: { ... }
   })
 
   // Hello

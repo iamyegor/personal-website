@@ -14,6 +14,9 @@ require 'phpmailer/src/PHPMailer.php';
 $mail = new PHPMailer();
 $mail->CharSet = 'UTF-8';
 
+// Log that we're starting to handle the email request
+error_log("Starting to handle email request from contact form");
+
 $isSmtp = true;
 if ($isSmtp) {
     require 'phpmailer/src/SMTP.php';
@@ -24,31 +27,32 @@ if ($isSmtp) {
     //Tell PHPMailer to use SMTP
     $mail->isSMTP();
     //Set the hostname of the mail server
-    $mail->Host = 'your smtp';
+    $mail->Host = 'smtp.improvmx.com';
     //Whether to use SMTP authentication
     $mail->SMTPAuth = true;
     //Username to use for SMTP authentication
-    $mail->Username = 'html@demo.com';
+    $mail->Username = 'contacted@egorbobrov.com';
     //Password to use for SMTP authentication
-    $mail->Password = 'Password';
+    $mail->Password = 'baUfMQDE6hQ0';
     //Set the SMTP port number - likely to be 25, 465 or 587
-    $mail->Port = 465;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+    $mail->Port = 587;
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    //Set timeout in seconds
+    $mail->Timeout = 30;
 }
 
 // Form Fields Value Variables
 $name = filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-$phone = filter_var($_POST['phone'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $subject = filter_var($_POST['subject'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $message = filter_var($_POST['message'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $message = nl2br($message);
 
 //Use a fixed address in your own domain as the from address
-$mail->setFrom('html@demo.com', 'You Company Name Or Your Name');
+$mail->setFrom('contacted@egorbobrov.com', 'My Website Notification');
 
 //Set who the message is to be sent to
-$mail->addAddress('html@demo.com', 'Test');
+$mail->addAddress('richcarter.tech@gmail.com');
 
 $mail->addReplyTo($email, $name);
 
@@ -56,7 +60,8 @@ $mail->addReplyTo($email, $name);
 $mail->isHTML(true);
 
 // Message Body
-$body_message = "Name: " . $name . "<br>";
+$body_message = "Subject: " . $subject . "<br>";
+$body_message .= "Name: " . $name . "<br>";
 $body_message .= "Email: " . $email . "<br><br>";
 $body_message .= "\n\n" . $message;
 
