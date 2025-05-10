@@ -1,0 +1,8 @@
+        RewriteEngine On
+
+        # Condition: If the request is not for an existing directory
+        RewriteCond %{REQUEST_FILENAME} !-d
+        # Condition: If the request (e.g., /about) + .html (e.g., /about.html) is an existing file
+        RewriteCond %{REQUEST_FILENAME}.html -f
+        # Rule: Rewrite anything not containing a dot (e.g. /about) to itself + .html (e.g. /about.html)
+        RewriteRule ^([^.]+)$ $1.html [L]
