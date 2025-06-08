@@ -52,8 +52,16 @@ use GuzzleHttp\Client;
 error_log("Starting to handle email request from contact form using Brevo API");
 
 // Configure Brevo API
+$brevo_api_key = $_ENV['BREVO_API_KEY'] ?? getenv('BREVO_API_KEY');
+if (!$brevo_api_key) {
+    error_log("BREVO_API_KEY environment variable not set");
+    http_response_code(500);
+    echo 'Server configuration error. Please try again later.';
+    exit;
+}
+
 $config = Configuration::getDefaultConfiguration()
-    ->setApiKey('api-key', 'xkeys' + 'ib-88a62fe50f1e3cf4608453b964cc7ce7ce236c602dc79921260c7e9a11809928-kkj7fzNmBGVBX2NT');
+    ->setApiKey('api-key', $brevo_api_key);
 
 $apiInstance = new TransactionalEmailsApi(
     new Client(),

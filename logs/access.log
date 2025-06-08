@@ -94,3 +94,6 @@
 192.168.127.1 - - [08/Jun/2025:22:49:31 +0000] "GET /assets/css/pages/home.css HTTP/1.1" 200 7329 "http://localhost:8080/index.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
 192.168.127.1 - - [08/Jun/2025:22:50:23 +0000] "-" 408 0 "-" "-"
 192.168.127.1 - - [08/Jun/2025:22:50:30 +0000] "-" 408 0 "-" "-"
+192.168.127.1 - - [08/Jun/2025:23:02:45 +0000] "GET /contact.html HTTP/1.1" 200 7338 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+192.168.127.1 - - [08/Jun/2025:23:02:45 +0000] "GET /assets/css/pages/home.css HTTP/1.1" 200 7329 "http://localhost:8080/contact.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+192.168.127.1 - - [08/Jun/2025:23:02:55 +0000] "POST /mail.php HTTP/1.1" 200 256 "http://localhost:8080/contact.html" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
