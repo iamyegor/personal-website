@@ -1,0 +1,9 @@
+.git
+.github
+.DS_Store
+*.md
+README*
+vendor/
+composer.lock
+node_modules/
+.env* 

@@ -2362,7 +2362,7 @@ a {
 .contact-form-control::placeholder,
 .contact-form-control:focus {
   opacity: 1;
-  color: rgba(8, 8, 8, 0.6);
+  /* color: rgba(8, 8, 8, 0.6); */
 }
 
 textarea.contact-form-control {

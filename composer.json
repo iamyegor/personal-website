@@ -1,0 +1,14 @@
+{
+  "name": "personal-website/contact-form",
+  "description": "Personal website with contact form using Brevo API",
+  "type": "project",
+  "require": {
+    "php": ">=8.0",
+    "getbrevo/brevo-php": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "PHPMailer\\PHPMailer\\": "phpmailer/src/"
+    }
+  }
+}
