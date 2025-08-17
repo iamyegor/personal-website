@@ -9,11 +9,11 @@ const projectsData = [
     previewImage: "netiq/preview.webp",
     link: "projects/netiq.html",
   },
-  {
-    name: "Visa Appointments Booking Bot",
-    previewImage: "visa-bot/preview.webp",
-    link: "projects/visa-bot.html",
-  },
+  // {
+  //   name: "Visa Appointments Booking Bot",
+  //   previewImage: "visa-bot/preview.webp",
+  //   link: "projects/visa-bot.html",
+  // },
   {
     name: "Krijji - E-commerce Store",
     previewImage: "krijji/preview.webp",
