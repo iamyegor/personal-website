@@ -143,63 +143,17 @@
     Sending...
 `
 
-  // Store Turnstile widget ID
-  let turnstileWidgetId = null
-
-  // Initialize Turnstile widget and store its ID
-  function initTurnstile() {
-    if (typeof turnstile !== "undefined" && turnstile) {
-      const widgetElement = document.getElementById("turnstile-widget")
-      if (widgetElement && !turnstileWidgetId) {
-        // Remove any existing widget first
-        try {
-          turnstile.remove(widgetElement)
-        } catch (e) {
-          // Ignore if widget doesn't exist
-        }
-        // Render the widget and store the ID
-        turnstileWidgetId = turnstile.render(widgetElement, {
-          sitekey: "0x4AAAAAACCbsJ2DDhisu34C",
-        })
-      }
-    }
-  }
-
-  // Function to reset Turnstile widget
   function resetTurnstile() {
-    if (typeof turnstile !== "undefined" && turnstile && turnstileWidgetId !== null) {
-      try {
-        turnstile.reset(turnstileWidgetId)
-      } catch (e) {
-        // If reset fails, reinitialize the widget
-        turnstileWidgetId = null
-        initTurnstile()
-      }
-    } else {
-      // Initialize if not already done
-      initTurnstile()
+    if (typeof turnstile === "undefined") {
+      return
+    }
+
+    try {
+      turnstile.reset()
+    } catch (error) {
+      // Ignore reset errors; the widget will prompt the user again automatically
     }
   }
-
-  // Initialize Turnstile when the page is ready
-  $(document).ready(function () {
-    // Wait for Turnstile script to load
-    if (typeof turnstile !== "undefined") {
-      initTurnstile()
-    } else {
-      // Wait for script to load
-      const checkTurnstile = setInterval(function () {
-        if (typeof turnstile !== "undefined") {
-          initTurnstile()
-          clearInterval(checkTurnstile)
-        }
-      }, 100)
-      // Stop checking after 5 seconds
-      setTimeout(function () {
-        clearInterval(checkTurnstile)
-      }, 5000)
-    }
-  })
 
   contactForm.validate({
     submitHandler: async function (form, event) {
