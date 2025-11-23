@@ -85,9 +85,15 @@ if (!isset($_POST['cf-turnstile-response']) || empty($_POST['cf-turnstile-respon
 function verifyTurnstile($token) {
     $secret = $_ENV['TURNSTILE_SECRET_KEY'] ?? getenv('TURNSTILE_SECRET_KEY');
     if (!$secret) {
-        error_log("TURNSTILE_SECRET_KEY environment variable not set");
+        error_log("Turnstile verification failed: TURNSTILE_SECRET_KEY environment variable not set");
         return false;
     }
+    
+    if (empty($token)) {
+        error_log("Turnstile verification failed: Empty token provided");
+        return false;
+    }
+    
     $url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
     
     $data = [
@@ -100,7 +106,8 @@ function verifyTurnstile($token) {
         'http' => [
             'header' => "Content-type: application/x-www-form-urlencoded\r\n",
             'method' => 'POST',
-            'content' => http_build_query($data)
+            'content' => http_build_query($data),
+            'timeout' => 10
         ]
     ];
     
@@ -108,18 +115,38 @@ function verifyTurnstile($token) {
     $result = file_get_contents($url, false, $context);
     
     if ($result === false) {
-        error_log('Failed to verify Turnstile token');
+        $error = error_get_last();
+        $errorMsg = $error ? $error['message'] : 'Unknown error';
+        error_log("Turnstile verification failed: HTTP request failed - " . $errorMsg);
         return false;
     }
     
     $response = json_decode($result, true);
-    return isset($response['success']) && $response['success'] === true;
+    
+    if ($response === null) {
+        error_log("Turnstile verification failed: Invalid JSON response from Cloudflare. Raw response: " . substr($result, 0, 500));
+        return false;
+    }
+    
+    if (!isset($response['success'])) {
+        error_log("Turnstile verification failed: Missing 'success' field in response. Response: " . json_encode($response));
+        return false;
+    }
+    
+    if ($response['success'] !== true) {
+        $errorCodes = isset($response['error-codes']) ? implode(', ', $response['error-codes']) : 'No error codes provided';
+        $remoteIp = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
+        error_log("Turnstile verification failed: success=false, error-codes=[" . $errorCodes . "], remote-ip=" . $remoteIp . ", response=" . json_encode($response));
+        return false;
+    }
+    
+    return true;
 }
 
 $turnstile_token = $_POST['cf-turnstile-response'];
 if (!verifyTurnstile($turnstile_token)) {
     http_response_code(400);
-    error_log('Turnstile verification failed');
+    error_log('Turnstile verification failed - see detailed error above');
     echo 'Security verification failed. Please try again.';
     exit;
 }
