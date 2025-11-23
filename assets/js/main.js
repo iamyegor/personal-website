@@ -143,17 +143,87 @@
     Sending...
 `
 
+  const turnstileSiteKey = "0x4AAAAAACCbsJ2DDhisu34C"
+  const turnstileContainer = document.getElementById("turnstile-widget")
+  let turnstileWidgetId = null
+
+  function renderTurnstileWidget() {
+    if (
+      typeof turnstile === "undefined" ||
+      typeof turnstile.render !== "function" ||
+      !turnstileContainer
+    ) {
+      return
+    }
+
+    try {
+      turnstileWidgetId = turnstile.render(turnstileContainer, {
+        sitekey: turnstileSiteKey,
+      })
+    } catch (error) {
+      // Ignore render errors; widget will retry on next init cycle
+    }
+  }
+
   function resetTurnstile() {
     if (typeof turnstile === "undefined") {
       return
     }
 
-    try {
-      turnstile.reset()
-    } catch (error) {
-      // Ignore reset errors; the widget will prompt the user again automatically
+    if (turnstileWidgetId !== null) {
+      try {
+        turnstile.reset(turnstileWidgetId)
+        return
+      } catch (error) {
+        try {
+          turnstile.remove(turnstileWidgetId)
+        } catch (removeError) {
+          // No-op; we'll re-render below
+        }
+        turnstileWidgetId = null
+      }
     }
+
+    renderTurnstileWidget()
   }
+
+  function initTurnstileWidget() {
+    if (!turnstileContainer) {
+      return
+    }
+
+    const initialize = function () {
+      if (turnstileWidgetId === null) {
+        renderTurnstileWidget()
+      }
+    }
+
+    if (
+      typeof turnstile !== "undefined" &&
+      typeof turnstile.render === "function"
+    ) {
+      initialize()
+      return
+    }
+
+    const intervalId = setInterval(function () {
+      if (
+        typeof turnstile !== "undefined" &&
+        typeof turnstile.render === "function"
+      ) {
+        clearInterval(intervalId)
+        initialize()
+      }
+    }, 100)
+
+    setTimeout(function () {
+      clearInterval(intervalId)
+    }, 5000)
+  }
+
+  $(document).ready(function () {
+    initTurnstileWidget()
+  })
 
   contactForm.validate({
     submitHandler: async function (form, event) {
