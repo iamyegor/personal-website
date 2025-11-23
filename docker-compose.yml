@@ -11,3 +11,4 @@ services:
       - ./logs:/var/log/apache2
     environment:
       - BREVO_API_KEY=${BREVO_API_KEY}
+      - TURNSTILE_SECRET_KEY=${TURNSTILE_SECRET_KEY}

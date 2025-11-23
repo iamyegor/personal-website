@@ -88,3 +88,6 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Sun Jun 08 23:02:55.330875 2025] [php:notice] [pid 13:tid 13] [client 192.168.127.1:31608] Starting to handle email request from contact form using Brevo API, referer: http://localhost:8080/contact.html
 [Sun Jun 08 23:02:55.633831 2025] [php:notice] [pid 13:tid 13] [client 192.168.127.1:31608] Email sent successfully via Brevo API. Message ID: <202506082302.82888378491@smtp-relay.mailin.fr>, referer: http://localhost:8080/contact.html
 [Sun Jun 08 23:03:07.388175 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00170: caught SIGWINCH, shutting down gracefully
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.20.0.2. Set the 'ServerName' directive globally to suppress this message
+[Sun Nov 23 05:50:44.314635 2025] [mpm_prefork:notice] [pid 1:tid 1] AH00163: Apache/2.4.65 (Debian) PHP/8.2.29 configured -- resuming normal operations
+[Sun Nov 23 05:50:44.314656 2025] [core:notice] [pid 1:tid 1] AH00094: Command line: 'apache2 -D FOREGROUND'

@@ -75,6 +75,55 @@ if (!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['subject'
     exit;
 }
 
+// Verify Cloudflare Turnstile
+if (!isset($_POST['cf-turnstile-response']) || empty($_POST['cf-turnstile-response'])) {
+    http_response_code(400);
+    echo 'Please complete the security verification.';
+    exit;
+}
+
+function verifyTurnstile($token) {
+    $secret = $_ENV['TURNSTILE_SECRET_KEY'] ?? getenv('TURNSTILE_SECRET_KEY');
+    if (!$secret) {
+        error_log("TURNSTILE_SECRET_KEY environment variable not set");
+        return false;
+    }
+    $url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+    
+    $data = [
+        'secret' => $secret,
+        'response' => $token,
+        'remoteip' => $_SERVER['REMOTE_ADDR'] ?? ''
+    ];
+    
+    $options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        ]
+    ];
+    
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+    
+    if ($result === false) {
+        error_log('Failed to verify Turnstile token');
+        return false;
+    }
+    
+    $response = json_decode($result, true);
+    return isset($response['success']) && $response['success'] === true;
+}
+
+$turnstile_token = $_POST['cf-turnstile-response'];
+if (!verifyTurnstile($turnstile_token)) {
+    http_response_code(400);
+    error_log('Turnstile verification failed');
+    echo 'Security verification failed. Please try again.';
+    exit;
+}
+
 $name = filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 $subject = filter_var($_POST['subject'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
