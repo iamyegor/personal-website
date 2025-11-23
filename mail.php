@@ -78,7 +78,7 @@ if (!isset($_POST['name']) || !isset($_POST['email']) || !isset($_POST['subject'
 // Verify Cloudflare Turnstile
 if (!isset($_POST['cf-turnstile-response']) || empty($_POST['cf-turnstile-response'])) {
     http_response_code(400);
-    echo 'Please complete the security verification.';
+    echo 'Please complete the security verification. If you don\'t see the Cloudflare Captcha, please reload the page.';
     exit;
 }
 
